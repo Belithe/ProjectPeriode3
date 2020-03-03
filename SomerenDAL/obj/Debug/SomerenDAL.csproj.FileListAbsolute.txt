@@ -22,3 +22,12 @@ C:\Data\Projects\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.csprojAssemblyRefe
 C:\Data\Projects\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
 C:\Data\Projects\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.dll
 C:\Data\Projects\Someren1920F\SomerenDAL\obj\Debug\SomerenDAL.pdb
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenDAL.dll.config
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenDAL.dll
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenDAL.pdb
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenModel.dll
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenModel.pdb
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csprojAssemblyReference.cache
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.dll
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.pdb
