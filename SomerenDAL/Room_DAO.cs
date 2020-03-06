@@ -22,7 +22,7 @@ namespace SomerenDAL {
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Room> Db_Get_Room_By_Type(strint roomType) {
+        public List<Room> Db_Get_Room_By_Type(string roomType) {
             string query = $"SELECT * FROM Rooms WHERE RoomType = {roomType}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));

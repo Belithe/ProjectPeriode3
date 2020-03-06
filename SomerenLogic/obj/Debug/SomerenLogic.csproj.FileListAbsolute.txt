@@ -38,3 +38,14 @@ C:\Data\Github\rster2002\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.csp
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenLogic.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenLogic.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenDAL.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenModel.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenDAL.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\bin\Debug\SomerenModel.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.pdb

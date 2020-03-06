@@ -31,3 +31,12 @@ C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csprojA
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.dll
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenDAL.dll.config
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenDAL.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenDAL.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenModel.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\bin\Debug\SomerenModel.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csprojAssemblyReference.cache
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.dll
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.pdb
