@@ -18,6 +18,8 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
+
+            hideAllPanels();
         }
 
         private void SomerenUI_Load(object sender, EventArgs e)
@@ -31,24 +33,21 @@ namespace SomerenUI
             img_Dashboard.Hide();
             pnl_Rooms.Hide();
             pnl_Students.Hide();
+            pnl_RoomsOverview.Hide();
         }
 
         private void showPanel(string panelName)
         {
+            hideAllPanels();
 
             if (panelName == "Dashboard")
             {
-
-                hideAllPanels();
-
                 // show dashboard
                 pnl_Dashboard.Show();
                 img_Dashboard.Show();
             }
             else if (panelName == "Students")
             {
-                hideAllPanels();
-
                 // show students
                 pnl_Students.Show();
 
@@ -69,8 +68,6 @@ namespace SomerenUI
             }
             else if (panelName == "Rooms")
             {
-                hideAllPanels();
-
                 pnl_Rooms.Show();
 
                 Room_Service roomService = new Room_Service();
@@ -91,12 +88,48 @@ namespace SomerenUI
             }
             else if (panelName == "RoomsOverview")
             {
-                hideAllPanels();
-
                 // Shows the room overview panel
                 pnl_RoomsOverview.Show();
 
-                
+                // Empty the flowlayout
+                flowLayoutRoomsOverview.Controls.Clear();
+
+                // Create the service objects
+                Room_Overview_Services roomOverviewServices = new Room_Overview_Services();
+
+                // Fetch the rooms from the database
+                List<Room> rooms = roomOverviewServices.getRoomsOverview();
+
+                // Foreach room in the database
+                foreach (Room room in rooms) {
+                    // Create a container for each room
+                    GroupBox roomContainer = new GroupBox() {
+                        Text = $"Room {room.Number}",
+                        MinimumSize = new Size(100, 23),
+                        AutoSize = true
+                    };
+                    roomContainer.Font = new Font(roomContainer.Font, FontStyle.Bold);
+
+                    // Create a listview to hold the users
+                    ListView listView = new ListView() {
+                        View = View.List,
+                        Location = new Point(7, 20),
+                        BackColor = SystemColors.Control,
+                        BorderStyle = BorderStyle.None,
+                        Size = new Size(141, 5)
+                    };
+                    listView.Font = new Font(listView.Font, FontStyle.Regular);
+
+                    // Adds the users to the list and update the list's height
+                    foreach (User user in room.Users) {
+                        listView.Items.Add(user.ToString());
+                        listView.Size = new Size(listView.Size.Width, listView.Size.Height + 20);
+                    }
+
+                    // Add the list to the room container and add the container to the flowLayout
+                    roomContainer.Controls.Add(listView);
+                    flowLayoutRoomsOverview.Controls.Add(roomContainer);
+                }
             }
         }
 

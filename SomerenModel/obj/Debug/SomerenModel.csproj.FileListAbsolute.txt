@@ -18,3 +18,8 @@ E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenModel\bin\Debug\SomerenMode
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.dll
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.pdb
