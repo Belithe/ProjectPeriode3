@@ -25,15 +25,21 @@ namespace SomerenUI
             showPanel("Dashboard");
         }
 
+        private void hideAllPanels() {
+            // hide all other panels
+            pnl_Dashboard.Hide();
+            img_Dashboard.Hide();
+            pnl_Rooms.Hide();
+            pnl_Students.Hide();
+        }
+
         private void showPanel(string panelName)
         {
 
             if (panelName == "Dashboard")
             {
 
-                // hide all other panels
-                pnl_Students.Hide();
-                pnl_Rooms.Hide();
+                hideAllPanels();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -41,14 +47,10 @@ namespace SomerenUI
             }
             else if (panelName == "Students")
             {
-                // hide all other panels
-                pnl_Dashboard.Hide();
-                img_Dashboard.Hide();
-                pnl_Rooms.Hide();
+                hideAllPanels();
 
                 // show students
                 pnl_Students.Show();
-
 
 
                 // fill the students listview within the students panel with a list of students
@@ -67,10 +69,7 @@ namespace SomerenUI
             }
             else if (panelName == "Rooms")
             {
-                // hide all other panels
-                pnl_Dashboard.Hide();
-                img_Dashboard.Hide();
-                pnl_Students.Hide();
+                hideAllPanels();
 
                 pnl_Rooms.Show();
 
@@ -89,6 +88,15 @@ namespace SomerenUI
                     listViewRooms.Items.Add(new ListViewItem(entry));
                 }
 
+            }
+            else if (panelName == "RoomsOverview")
+            {
+                hideAllPanels();
+
+                // Shows the room overview panel
+                pnl_RoomsOverview.Show();
+
+                
             }
         }
 
@@ -130,6 +138,10 @@ namespace SomerenUI
         private void listViewRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void roomsOverviewToolStripMenuItem_Click(object sender, EventArgs e) {
+            showPanel("RoomsOverview");
         }
     }
 }
