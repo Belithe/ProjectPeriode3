@@ -34,6 +34,7 @@ namespace SomerenUI
             pnl_Rooms.Hide();
             pnl_Students.Hide();
             pnl_RoomsOverview.Hide();
+     
         }
 
         private void showPanel(string panelName)
@@ -131,6 +132,28 @@ namespace SomerenUI
                     flowLayoutRoomsOverview.Controls.Add(roomContainer);
                 }
             }
+            else if (panelName == "Kassa")
+            {
+            }
+
+            else if (panelName == "Lecturers")
+            {
+                pnl_Lecturers.Show();
+
+                SomerenLogic.Teacher_Services lectService = new SomerenLogic.Teacher_Services();
+                List<Teacher> lecturerList = lectService.GetTeachers();
+
+                // clear the listview before filling it again
+                listViewTeachers.Clear();
+
+                foreach (SomerenModel.Teacher s in lecturerList)
+                {
+
+                    ListViewItem li = new ListViewItem(s.Name);
+                    listViewTeachers.Items.Add(li);
+                }
+            }
+
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,7 +183,7 @@ namespace SomerenUI
 
         private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showPanel("Students");
+            showPanel("Student");
         }
 
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -175,6 +198,16 @@ namespace SomerenUI
 
         private void roomsOverviewToolStripMenuItem_Click(object sender, EventArgs e) {
             showPanel("RoomsOverview");
+        }
+
+        private void KassaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Kassa");
+        }
+
+        private void LecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Lecturers");
         }
     }
 }
