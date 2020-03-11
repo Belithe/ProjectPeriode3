@@ -82,3 +82,7 @@ C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-maste
 C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.cache
 C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenUI\obj\Debug\SomerenUI.csproj.CoreCompileInputs.cache
 C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.RoomsOverviewView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.RoomsView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.StudentsView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeachersView.resources
