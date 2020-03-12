@@ -49,3 +49,15 @@ E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogi
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.dll
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.pdb
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenLogic\obj\Debug\SomerenLogic.pdb

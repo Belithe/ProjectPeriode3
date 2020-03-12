@@ -23,16 +23,16 @@ namespace SomerenDAL {
         }
 
         private List<Teacher> ReadTables(DataTable dataTable) {
-            List<Teacher> students = new List<Teacher>();
+            List<Teacher> teachers = new List<Teacher>();
 
             foreach (DataRow dr in dataTable.Rows) {
                 Teacher teacher = new Teacher() {
                     Number = (int) dr["UserId"],
                     Name = (string) dr["Name"]
                 };
-                students.Add(teacher);
+                teachers.Add(teacher);
             }
-            return students;
+            return teachers;
         }
     }
 }
