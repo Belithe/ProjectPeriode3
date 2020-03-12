@@ -25,9 +25,8 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.listViewTeachers = new System.Windows.Forms.ListView();
-            this.studentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.studentName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.studentDOB = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UserId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -38,7 +37,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.Size = new System.Drawing.Size(159, 39);
             this.label1.TabIndex = 6;
             this.label1.Text = "Teachers";
             // 
@@ -46,28 +45,25 @@
             // 
             this.listViewTeachers.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.listViewTeachers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.studentID,
-            this.studentName,
-            this.studentDOB});
-            this.listViewTeachers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.UserId,
+            this.Name});
+            this.listViewTeachers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewTeachers.HideSelection = false;
             this.listViewTeachers.Location = new System.Drawing.Point(8, 44);
             this.listViewTeachers.Name = "listViewTeachers";
             this.listViewTeachers.Size = new System.Drawing.Size(811, 408);
             this.listViewTeachers.TabIndex = 7;
             this.listViewTeachers.UseCompatibleStateImageBehavior = false;
+            this.listViewTeachers.View = System.Windows.Forms.View.Details;
             // 
-            // studentID
+            // UserId
             // 
-            this.studentID.Text = "ID";
+            this.UserId.Text = "Number";
             // 
-            // studentName
+            // Name
             // 
-            this.studentName.Text = "Name";
-            // 
-            // studentDOB
-            // 
-            this.studentDOB.Text = "Date of Birth";
+            this.Name.Text = "Name";
+            this.Name.Width = 180;
             // 
             // pictureBox1
             // 
@@ -85,7 +81,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listViewTeachers);
             this.Controls.Add(this.label1);
-            this.Name = "TeachersView";
             this.Size = new System.Drawing.Size(938, 455);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -97,9 +92,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listViewTeachers;
-        private System.Windows.Forms.ColumnHeader studentID;
-        private System.Windows.Forms.ColumnHeader studentName;
-        private System.Windows.Forms.ColumnHeader studentDOB;
+        private System.Windows.Forms.ColumnHeader UserId;
+        private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
