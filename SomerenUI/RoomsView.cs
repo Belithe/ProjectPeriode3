@@ -28,7 +28,7 @@ namespace SomerenUI {
                 entry[0] = room.Number.ToString();
                 entry[1] = room.Type;
                 entry[2] = room.Capacity.ToString();
-                ListViewItem item = new ListViewItem(room.Number.ToString());
+
                 listViewRooms.Items.Add(new ListViewItem(entry));
             }
         }

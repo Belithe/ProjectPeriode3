@@ -15,12 +15,13 @@ namespace SomerenUI {
             List<Teacher> lecturerList = lectService.GetTeachers();
 
             // clear the listview before filling it again
-            listViewTeachers.Clear();
+            listViewTeachers.Items.Clear();
 
-            foreach (SomerenModel.Teacher s in lecturerList) {
+            foreach (Teacher teacher in lecturerList) {
+                ListViewItem item = new ListViewItem(teacher.Number.ToString());
+                item.SubItems.Add(teacher.Name);
 
-                ListViewItem li = new ListViewItem(s.Name);
-                listViewTeachers.Items.Add(li);
+                listViewTeachers.Items.Add(item);
             }
         }
     }
