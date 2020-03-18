@@ -59,6 +59,12 @@
     <Compile Include="RoomsView.Designer.cs">
       <DependentUpon>RoomsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SalesView.Designer.cs">
+      <DependentUpon>SalesView.cs</DependentUpon>
+    </Compile>
     <Compile Include="SomerenUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RoomsView.resx">
       <DependentUpon>RoomsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesView.resx">
+      <DependentUpon>SalesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SomerenUI.resx">
       <DependentUpon>SomerenUI.cs</DependentUpon>

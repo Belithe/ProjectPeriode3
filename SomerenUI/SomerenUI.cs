@@ -102,12 +102,16 @@ namespace SomerenUI
 
         private void KassaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showPanel("Kassa");
+
         }
 
         private void LecturersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadView(new TeachersView());
+        }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e) {
+            loadView(new SalesView());
         }
     }
 }
