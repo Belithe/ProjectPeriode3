@@ -86,3 +86,4 @@ C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.RoomsOver
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.RoomsView.resources
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.StudentsView.resources
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeachersView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.SalesView.resources
