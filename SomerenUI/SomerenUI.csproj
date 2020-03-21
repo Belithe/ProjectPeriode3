@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTWView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BTWView.Designer.cs">
+      <DependentUpon>BTWView.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomsOverviewView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="TeachersView.Designer.cs">
       <DependentUpon>TeachersView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BTWView.resx">
+      <DependentUpon>BTWView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RoomsOverviewView.resx">
       <DependentUpon>RoomsOverviewView.cs</DependentUpon>
     </EmbeddedResource>
