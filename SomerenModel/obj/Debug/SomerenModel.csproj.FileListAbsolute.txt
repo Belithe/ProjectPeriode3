@@ -29,3 +29,8 @@ C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-maste
 C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenModel\obj\Debug\SomerenModel.pdb
 C:\Users\matth\OneDrive\Desktop\Inhlland\ProjectManagement\ProjectPeriode3-master\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
 C:\Data\Github\rster2002\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+D:\Documents\inHolland\ProjectPeriode3\SomerenModel\bin\Debug\SomerenModel.dll
+D:\Documents\inHolland\ProjectPeriode3\SomerenModel\bin\Debug\SomerenModel.pdb
+D:\Documents\inHolland\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+D:\Documents\inHolland\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.dll
+D:\Documents\inHolland\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.pdb

@@ -113,5 +113,10 @@ namespace SomerenUI
         private void salesToolStripMenuItem_Click(object sender, EventArgs e) {
             loadView(new SalesView());
         }
+
+        private void bTWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadView(new BTWView());
+        }
     }
 }
