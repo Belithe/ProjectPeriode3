@@ -55,6 +55,17 @@ namespace SomerenUI
                 listViewDrinks.Items.Add(item);
             }
         }
+
+        private void listViewStudentsKassa_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < listViewStudentsKassa.Items.Count; ++i)
+            {
+                if (i != e.Index)
+                {
+                    listViewStudentsKassa.SetItemChecked(i, false);
+                }
+            }
+        }
     }
 }
 

@@ -159,3 +159,10 @@ C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.cs
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.exe
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.pdb
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.BTWView.resources
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.KassaView.resources
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.RoomsOverviewView.resources
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.RoomsView.resources
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.SalesView.resources
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.StudentsView.resources
+E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeachersView.resources
