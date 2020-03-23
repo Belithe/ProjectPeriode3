@@ -53,6 +53,12 @@
     <Compile Include="BTWView.Designer.cs">
       <DependentUpon>BTWView.cs</DependentUpon>
     </Compile>
+    <Compile Include="KassaView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KassaView.Designer.cs">
+      <DependentUpon>KassaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomsOverviewView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="BTWView.resx">
       <DependentUpon>BTWView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KassaView.resx">
+      <DependentUpon>KassaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomsOverviewView.resx">
       <DependentUpon>RoomsOverviewView.cs</DependentUpon>
