@@ -15,14 +15,14 @@ namespace SomerenDAL
     {
         public List<Drink> Db_Get_All_Drinks()
         {
-            string query = "SELECT DrinkName, Price, IsAlcoholic, AmmountInStock Name FROM Drinks";
+            string query = "SELECT * FROM Drinks";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public List<Drink> Db_Get_Drink_By_Name(string name)
         {
-            string query = $"SELECT DrinkName, Price, IsAlcoholic, AmmountInStock Name FROM Drinks WHERE DrinkName = {name}";
+            string query = $"SELECT * FROM Drinks WHERE DrinkName = '{name}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -33,12 +33,12 @@ namespace SomerenDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                Drink drink = new Drink();
+                Drink drink = new Drink()
                 {
-                    drink.DrinkName = (string)dr["DrinkName"];
-                    drink.Price = (int)dr["Price"];
-                    drink.IsAlcoholic = (bool)dr["IsAlcoholic"];
-                    drink.AmountInStock = (int)dr["AmountInStock"];
+                    DrinkName = (string) dr["DrinkName"],
+                    Price = (double) (decimal) dr["Price"],
+                    IsAlcoholic = (bool) dr["IsAlcoholic"],
+                    AmountInStock = (int) dr["AmountInStock"],
                 };
                 drinks.Add(drink);
             }

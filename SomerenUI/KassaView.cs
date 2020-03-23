@@ -47,12 +47,12 @@ namespace SomerenUI
             List<Drink> drinkList = drinkService.GetDrinks();
 
             // clear the listview before filling it again
-            listViewStudentsKassa.Items.Clear();
+            listViewDrinks.Items.Clear();
 
             foreach (Drink drink in drinkList)
             {
                 ListViewItem item = new ListViewItem(drink.DrinkName);
-                listViewStudentsKassa.Items.Add(item);
+                listViewDrinks.Items.Add(item);
             }
         }
     }

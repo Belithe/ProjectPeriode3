@@ -33,7 +33,7 @@
             this.listViewStudentsKassa = new System.Windows.Forms.ListView();
             this.Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewDrinks = new System.Windows.Forms.ListView();
             this.DrinkName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,20 +42,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 33);
+            this.label1.Location = new System.Drawing.Point(28, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 39);
+            this.label1.Size = new System.Drawing.Size(96, 33);
             this.label1.TabIndex = 6;
             this.label1.Text = "Kassa";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SomerenUI.Properties.Resources.someren;
-            this.pictureBox1.Location = new System.Drawing.Point(1238, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(1100, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 135);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -65,10 +65,10 @@
             this.Number,
             this.Name});
             this.listViewStudentsKassa.HideSelection = false;
-            this.listViewStudentsKassa.Location = new System.Drawing.Point(39, 77);
-            this.listViewStudentsKassa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listViewStudentsKassa.Location = new System.Drawing.Point(35, 62);
+            this.listViewStudentsKassa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewStudentsKassa.Name = "listViewStudentsKassa";
-            this.listViewStudentsKassa.Size = new System.Drawing.Size(177, 586);
+            this.listViewStudentsKassa.Size = new System.Drawing.Size(158, 470);
             this.listViewStudentsKassa.TabIndex = 9;
             this.listViewStudentsKassa.UseCompatibleStateImageBehavior = false;
             this.listViewStudentsKassa.View = System.Windows.Forms.View.Details;
@@ -82,17 +82,18 @@
             this.Name.Text = "Name";
             this.Name.Width = 180;
             // 
-            // listView1
+            // listViewDrinks
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewDrinks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.DrinkName});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(268, 77);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(177, 586);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewDrinks.HideSelection = false;
+            this.listViewDrinks.Location = new System.Drawing.Point(238, 62);
+            this.listViewDrinks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewDrinks.Name = "listViewDrinks";
+            this.listViewDrinks.Size = new System.Drawing.Size(158, 470);
+            this.listViewDrinks.TabIndex = 10;
+            this.listViewDrinks.UseCompatibleStateImageBehavior = false;
+            this.listViewDrinks.View = System.Windows.Forms.View.Details;
             // 
             // DrinkName
             // 
@@ -101,13 +102,14 @@
             // 
             // KassaView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewDrinks);
             this.Controls.Add(this.listViewStudentsKassa);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Size = new System.Drawing.Size(1407, 700);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Size = new System.Drawing.Size(1251, 560);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,9 +121,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListView listViewStudentsKassa;
+        private System.Windows.Forms.ColumnHeader DrinkName;
+        private System.Windows.Forms.ListView listViewDrinks;
         private System.Windows.Forms.ColumnHeader Number;
         private System.Windows.Forms.ColumnHeader Name;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader DrinkName;
     }
 }
