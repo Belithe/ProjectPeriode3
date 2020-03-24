@@ -31,20 +31,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gridViewMon = new System.Windows.Forms.DataGridView();
-            this.columnActivityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.counsellorNamesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridViewTue = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridViewWed = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridViewThu = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridViewFri = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnActivityNameMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counsellorNamesColumnMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnActivityNameTue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counsellorNamesColumnTue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnActivityNameWed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counsellorNamesColumnWed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnActivityNameThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counsellorNamesColumnThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnActivityNameFri = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.counsellorNamesColumnFri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTue)).BeginInit();
@@ -76,106 +76,106 @@
             // 
             this.gridViewMon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewMon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnActivityName,
-            this.counsellorNamesColumn});
+            this.columnActivityNameMon,
+            this.counsellorNamesColumnMon});
             this.gridViewMon.Location = new System.Drawing.Point(172, 53);
             this.gridViewMon.Name = "gridViewMon";
             this.gridViewMon.Size = new System.Drawing.Size(241, 163);
             this.gridViewMon.TabIndex = 9;
             // 
-            // columnActivityName
-            // 
-            this.columnActivityName.HeaderText = "Activiteit";
-            this.columnActivityName.Name = "columnActivityName";
-            // 
-            // counsellorNamesColumn
-            // 
-            this.counsellorNamesColumn.HeaderText = "Begeleiding";
-            this.counsellorNamesColumn.Name = "counsellorNamesColumn";
-            // 
             // gridViewTue
             // 
             this.gridViewTue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewTue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.columnActivityNameTue,
+            this.counsellorNamesColumnTue});
             this.gridViewTue.Location = new System.Drawing.Point(485, 53);
             this.gridViewTue.Name = "gridViewTue";
             this.gridViewTue.Size = new System.Drawing.Size(241, 163);
             this.gridViewTue.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Activiteit";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Begeleiding";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // gridViewWed
             // 
             this.gridViewWed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewWed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.columnActivityNameWed,
+            this.counsellorNamesColumnWed});
             this.gridViewWed.Location = new System.Drawing.Point(41, 251);
             this.gridViewWed.Name = "gridViewWed";
             this.gridViewWed.Size = new System.Drawing.Size(241, 163);
             this.gridViewWed.TabIndex = 11;
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Activiteit";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Begeleiding";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
             // gridViewThu
             // 
             this.gridViewThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.columnActivityNameThu,
+            this.counsellorNamesColumnThu});
             this.gridViewThu.Location = new System.Drawing.Point(330, 251);
             this.gridViewThu.Name = "gridViewThu";
             this.gridViewThu.Size = new System.Drawing.Size(241, 163);
             this.gridViewThu.TabIndex = 12;
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Activiteit";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Begeleiding";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // gridViewFri
             // 
             this.gridViewFri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewFri.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.columnActivityNameFri,
+            this.counsellorNamesColumnFri});
             this.gridViewFri.Location = new System.Drawing.Point(621, 251);
             this.gridViewFri.Name = "gridViewFri";
             this.gridViewFri.Size = new System.Drawing.Size(241, 163);
             this.gridViewFri.TabIndex = 13;
             // 
-            // dataGridViewTextBoxColumn7
+            // columnActivityNameMon
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Activiteit";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.columnActivityNameMon.HeaderText = "Activiteit";
+            this.columnActivityNameMon.Name = "columnActivityNameMon";
             // 
-            // dataGridViewTextBoxColumn8
+            // counsellorNamesColumnMon
             // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Begeleiding";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.counsellorNamesColumnMon.HeaderText = "Begeleiding";
+            this.counsellorNamesColumnMon.Name = "counsellorNamesColumnMon";
+            // 
+            // columnActivityNameTue
+            // 
+            this.columnActivityNameTue.HeaderText = "Activiteit";
+            this.columnActivityNameTue.Name = "columnActivityNameTue";
+            // 
+            // counsellorNamesColumnTue
+            // 
+            this.counsellorNamesColumnTue.HeaderText = "Begeleiding";
+            this.counsellorNamesColumnTue.Name = "counsellorNamesColumnTue";
+            // 
+            // columnActivityNameWed
+            // 
+            this.columnActivityNameWed.HeaderText = "Activiteit";
+            this.columnActivityNameWed.Name = "columnActivityNameWed";
+            // 
+            // counsellorNamesColumnWed
+            // 
+            this.counsellorNamesColumnWed.HeaderText = "Begeleiding";
+            this.counsellorNamesColumnWed.Name = "counsellorNamesColumnWed";
+            // 
+            // columnActivityNameThu
+            // 
+            this.columnActivityNameThu.HeaderText = "Activiteit";
+            this.columnActivityNameThu.Name = "columnActivityNameThu";
+            // 
+            // counsellorNamesColumnThu
+            // 
+            this.counsellorNamesColumnThu.HeaderText = "Begeleiding";
+            this.counsellorNamesColumnThu.Name = "counsellorNamesColumnThu";
+            // 
+            // columnActivityNameFri
+            // 
+            this.columnActivityNameFri.HeaderText = "Activiteit";
+            this.columnActivityNameFri.Name = "columnActivityNameFri";
+            // 
+            // counsellorNamesColumnFri
+            // 
+            this.counsellorNamesColumnFri.HeaderText = "Begeleiding";
+            this.counsellorNamesColumnFri.Name = "counsellorNamesColumnFri";
             // 
             // WeekRoosterView
             // 
@@ -206,19 +206,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView gridViewMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnActivityName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn counsellorNamesColumn;
         private System.Windows.Forms.DataGridView gridViewTue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView gridViewWed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridView gridViewThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridView gridViewFri;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnActivityNameMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn counsellorNamesColumnMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnActivityNameTue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn counsellorNamesColumnTue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnActivityNameWed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn counsellorNamesColumnWed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnActivityNameThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn counsellorNamesColumnThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnActivityNameFri;
+        private System.Windows.Forms.DataGridViewTextBoxColumn counsellorNamesColumnFri;
     }
 }

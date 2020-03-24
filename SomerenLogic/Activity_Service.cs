@@ -8,7 +8,7 @@ using SomerenModel;
 
 namespace SomerenLogic
 {
-    class Activity_Service
+    public class Activity_Service
     {
         Activity_DAO activitydb = new Activity_DAO();
 
