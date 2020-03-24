@@ -97,6 +97,12 @@
     <Compile Include="TeachersView.Designer.cs">
       <DependentUpon>TeachersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="WeekRoosterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeekRoosterView.Designer.cs">
+      <DependentUpon>WeekRoosterView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BTWView.resx">
       <DependentUpon>BTWView.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeachersView.resx">
       <DependentUpon>TeachersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeekRoosterView.resx">
+      <DependentUpon>WeekRoosterView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
