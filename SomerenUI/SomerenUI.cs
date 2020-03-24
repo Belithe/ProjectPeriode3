@@ -118,5 +118,10 @@ namespace SomerenUI
         {
             loadView(new BTWView());
         }
+
+        private void weekRoosterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadView(new WeekRoosterView());
+        }
     }
 }

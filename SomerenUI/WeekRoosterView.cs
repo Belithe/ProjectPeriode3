@@ -24,6 +24,10 @@ namespace SomerenUI
         {
             Activity_Service actService = new Activity_Service();
             List<Activity> activities = actService.GetActivities();
+
+            Participant_Service prtService = new Participant_Service();
+            List<Participant> participants = prtService.GetParticipants();
+
             DataGridView gridView = new DataGridView();
 
             foreach (Activity activity in activities)
@@ -53,6 +57,28 @@ namespace SomerenUI
 
                 row.Cells[0].Value = activity.ActivityName;
 
+                string counsellorList = "";
+
+                foreach (Participant participant in participants)
+                {
+                    if(participant.ActivityId == activity.ActivityId && participant.ParticipancyType == "CNS")
+                    {
+                        counsellorList += participant.UserId.ToString();
+                        counsellorList += ", ";
+
+                    }
+                    
+                }
+
+                if (counsellorList == "")
+                {
+                    counsellorList = "Onbegeleid";
+                } else {
+                    counsellorList = counsellorList.Remove(counsellorList.Length - 2);
+                }
+                
+
+                row.Cells[1].Value = counsellorList;
 
             }
 

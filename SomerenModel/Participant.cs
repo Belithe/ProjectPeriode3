@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    public class Activity
+    public class Participant
     {
-        private DateTime activityStartDate;
+        public int UserId { get; set; }
         public int ActivityId { get; set; }
-        public string ActivityName { get; set; }
-        public DateTime ActivityStartDate { get; set; } 
+        public string ParticipancyType { get; set; }
     }
 }

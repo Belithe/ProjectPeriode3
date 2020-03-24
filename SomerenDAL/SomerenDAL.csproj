@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Activity_DAO.cs" />
     <Compile Include="Base.cs" />
+    <Compile Include="Participant_DAO.cs" />
     <Compile Include="Sales_DAO.cs" />
     <Compile Include="Drink_DAO.cs" />
     <Compile Include="Teacher_DAO.cs" />
