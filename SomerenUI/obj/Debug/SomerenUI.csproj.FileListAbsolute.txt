@@ -110,3 +110,5 @@ D:\Documents\inHolland\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.csproj.Copy
 D:\Documents\inHolland\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.exe
 D:\Documents\inHolland\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.pdb
 D:\Documents\inHolland\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.BTWView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.BTWView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeachersScheduleView.resources

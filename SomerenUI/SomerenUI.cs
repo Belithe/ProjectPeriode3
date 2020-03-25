@@ -118,5 +118,9 @@ namespace SomerenUI
         {
             loadView(new BTWView());
         }
+
+        private void teachersScheduleToolStripMenuItem_Click(object sender, EventArgs e) {
+            loadView(new TeachersScheduleView());
+        }
     }
 }
