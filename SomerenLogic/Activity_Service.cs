@@ -31,5 +31,7 @@ namespace SomerenLogic
             }
 
         }
+
+        public Activity GetActivityById(int id) => activitydb.Db_Get_Activity_By_Id(id)[0];
     }
 }

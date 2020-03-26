@@ -91,6 +91,18 @@
     <Compile Include="StudentsView.Designer.cs">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSelectPopup.Designer.cs">
+      <DependentUpon>TeacherSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeachersScheduleView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeachersScheduleView.designer.cs">
+      <DependentUpon>TeachersScheduleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeachersView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +145,12 @@
     </Compile>
     <EmbeddedResource Include="StudentsView.resx">
       <DependentUpon>StudentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSelectPopup.resx">
+      <DependentUpon>TeacherSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeachersScheduleView.resx">
+      <DependentUpon>TeachersScheduleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeachersView.resx">
       <DependentUpon>TeachersView.cs</DependentUpon>

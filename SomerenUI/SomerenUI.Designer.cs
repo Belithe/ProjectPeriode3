@@ -42,11 +42,12 @@
             this.kassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bTWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.weekRoosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
             this.img_Dashboard = new System.Windows.Forms.PictureBox();
             this.mainViewport = new System.Windows.Forms.Panel();
-            this.weekRoosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teachersSchedulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
@@ -119,6 +120,8 @@
             // 
             // activitiesToolStripMenuItem
             // 
+            this.activitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.teachersSchedulesToolStripMenuItem});
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
             this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.activitiesToolStripMenuItem.Text = "Activities";
@@ -154,9 +157,16 @@
             // bTWToolStripMenuItem
             // 
             this.bTWToolStripMenuItem.Name = "bTWToolStripMenuItem";
-            this.bTWToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.bTWToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.bTWToolStripMenuItem.Text = "BTW";
             this.bTWToolStripMenuItem.Click += new System.EventHandler(this.bTWToolStripMenuItem_Click);
+            // 
+            // weekRoosterToolStripMenuItem
+            // 
+            this.weekRoosterToolStripMenuItem.Name = "weekRoosterToolStripMenuItem";
+            this.weekRoosterToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.weekRoosterToolStripMenuItem.Text = "Week Rooster";
+            this.weekRoosterToolStripMenuItem.Click += new System.EventHandler(this.weekRoosterToolStripMenuItem_Click);
             // 
             // pnl_Dashboard
             // 
@@ -193,12 +203,12 @@
             this.mainViewport.Size = new System.Drawing.Size(938, 455);
             this.mainViewport.TabIndex = 5;
             // 
-            // weekRoosterToolStripMenuItem
+            // teachersSchedulesToolStripMenuItem
             // 
-            this.weekRoosterToolStripMenuItem.Name = "weekRoosterToolStripMenuItem";
-            this.weekRoosterToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.weekRoosterToolStripMenuItem.Text = "Week Rooster";
-            this.weekRoosterToolStripMenuItem.Click += new System.EventHandler(this.weekRoosterToolStripMenuItem_Click);
+            this.teachersSchedulesToolStripMenuItem.Name = "teachersSchedulesToolStripMenuItem";
+            this.teachersSchedulesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teachersSchedulesToolStripMenuItem.Text = "Teachers Schedules";
+            this.teachersSchedulesToolStripMenuItem.Click += new System.EventHandler(this.teachersSchedulesToolStripMenuItem_Click);
             // 
             // SomerenUI
             // 
@@ -244,6 +254,7 @@
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bTWToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem weekRoosterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teachersSchedulesToolStripMenuItem;
     }
 }
 

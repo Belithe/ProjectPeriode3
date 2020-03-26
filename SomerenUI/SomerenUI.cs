@@ -123,5 +123,9 @@ namespace SomerenUI
         {
             loadView(new WeekRoosterView());
         }
+
+        private void teachersSchedulesToolStripMenuItem_Click(object sender, EventArgs e) {
+            loadView(new TeachersScheduleView());
+        }
     }
 }

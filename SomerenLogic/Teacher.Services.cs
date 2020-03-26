@@ -18,5 +18,22 @@ namespace SomerenLogic
             List<Teacher> teachers = teacher_db.Db_Get_All_Teachers();
             return teachers;
         }
+
+        public bool isAvailableBetween(Teacher teacher, DateTime startDateTime, DateTime endDateTime) { // a2
+            Participant_Service participant_Service = new Participant_Service();
+            Activity_Service activity_Service = new Activity_Service();
+
+            List<Participant> participants = participant_Service.getParticipansByUser(teacher);
+
+            foreach (Participant participant in participants) {
+                Activity activity = activity_Service.GetActivityById(participant.ActivityId); // a1
+
+                if (!(endDateTime < activity.ActivityStartDate || startDateTime > activity.ActivityEndDate)) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

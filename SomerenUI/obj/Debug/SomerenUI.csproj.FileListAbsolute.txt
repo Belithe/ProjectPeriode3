@@ -167,3 +167,8 @@ E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.Sale
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.StudentsView.resources
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeachersView.resources
 E:\School\inHolland\ProjectDB\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.WeekRoosterView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.BTWView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.KassaView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.WeekRoosterView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeachersScheduleView.resources
+C:\Data\Github\rster2002\ProjectPeriode3\SomerenUI\obj\Debug\SomerenUI.TeacherSelectPopup.resources

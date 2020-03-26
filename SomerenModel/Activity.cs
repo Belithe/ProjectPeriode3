@@ -8,9 +8,9 @@ namespace SomerenModel
 {
     public class Activity
     {
-        private DateTime activityStartDate;
         public int ActivityId { get; set; }
         public string ActivityName { get; set; }
-        public DateTime ActivityStartDate { get; set; } 
+        public DateTime ActivityStartDate { get; set; }
+        public DateTime ActivityEndDate { get; set; }
     }
 }

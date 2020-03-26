@@ -32,5 +32,8 @@ namespace SomerenLogic
             }
 
         }
+
+        public List<Participant> getParticipansByUser(User user) => prt_db.Db_Get_Participants_By_UserId(user.Number);
+        public void setNewUserAsParticipant(Participant participant, User user) => prt_db.Db_Set_New_User_As_Participant(participant, user);
     }
 }

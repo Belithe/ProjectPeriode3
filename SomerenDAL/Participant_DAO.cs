@@ -28,6 +28,17 @@ namespace SomerenDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public void Db_Set_New_User_As_Participant(Participant participant, User newUser) {
+            string query = "UPDATE Participants " +
+                            "SET UserId = @newUserId " +
+                            "WHERE UserId = @oldUserId";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@oldUserId", participant.UserId);
+            sqlParameters[1] = new SqlParameter("@newUserId", newUser.Number);
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
         private List<Participant> ReadTables(DataTable dataTable)
         {
@@ -46,6 +57,5 @@ namespace SomerenDAL
 
             return participants;
         }
-
     }
 }
