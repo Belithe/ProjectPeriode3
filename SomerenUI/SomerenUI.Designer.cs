@@ -42,11 +42,12 @@
             this.kassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bTWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.weekRoosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
             this.img_Dashboard = new System.Windows.Forms.PictureBox();
             this.mainViewport = new System.Windows.Forms.Panel();
-            this.teachersScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teachersSchedulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
@@ -64,7 +65,8 @@
             this.roomsOverviewToolStripMenuItem,
             this.kassaToolStripMenuItem,
             this.salesToolStripMenuItem,
-            this.bTWToolStripMenuItem});
+            this.bTWToolStripMenuItem,
+            this.weekRoosterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -119,7 +121,7 @@
             // activitiesToolStripMenuItem
             // 
             this.activitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.teachersScheduleToolStripMenuItem});
+            this.teachersSchedulesToolStripMenuItem});
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
             this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.activitiesToolStripMenuItem.Text = "Activities";
@@ -159,6 +161,13 @@
             this.bTWToolStripMenuItem.Text = "BTW";
             this.bTWToolStripMenuItem.Click += new System.EventHandler(this.bTWToolStripMenuItem_Click);
             // 
+            // weekRoosterToolStripMenuItem
+            // 
+            this.weekRoosterToolStripMenuItem.Name = "weekRoosterToolStripMenuItem";
+            this.weekRoosterToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.weekRoosterToolStripMenuItem.Text = "Week Rooster";
+            this.weekRoosterToolStripMenuItem.Click += new System.EventHandler(this.weekRoosterToolStripMenuItem_Click);
+            // 
             // pnl_Dashboard
             // 
             this.pnl_Dashboard.Controls.Add(this.lbl_Dashboard);
@@ -194,12 +203,12 @@
             this.mainViewport.Size = new System.Drawing.Size(938, 455);
             this.mainViewport.TabIndex = 5;
             // 
-            // teachersScheduleToolStripMenuItem
+            // teachersSchedulesToolStripMenuItem
             // 
-            this.teachersScheduleToolStripMenuItem.Name = "teachersScheduleToolStripMenuItem";
-            this.teachersScheduleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.teachersScheduleToolStripMenuItem.Text = "Teachers Schedule";
-            this.teachersScheduleToolStripMenuItem.Click += new System.EventHandler(this.teachersScheduleToolStripMenuItem_Click);
+            this.teachersSchedulesToolStripMenuItem.Name = "teachersSchedulesToolStripMenuItem";
+            this.teachersSchedulesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teachersSchedulesToolStripMenuItem.Text = "Teachers Schedules";
+            this.teachersSchedulesToolStripMenuItem.Click += new System.EventHandler(this.teachersSchedulesToolStripMenuItem_Click);
             // 
             // SomerenUI
             // 
@@ -244,7 +253,8 @@
         private System.Windows.Forms.Panel mainViewport;
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bTWToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem teachersScheduleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem weekRoosterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teachersSchedulesToolStripMenuItem;
     }
 }
 

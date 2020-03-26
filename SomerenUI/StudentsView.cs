@@ -25,5 +25,10 @@ namespace SomerenUI {
                 listViewStudents.Items.Add(item);
             }
         }
+
+        private void StudentsView_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

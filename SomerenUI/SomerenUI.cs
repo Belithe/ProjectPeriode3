@@ -102,7 +102,7 @@ namespace SomerenUI
 
         private void KassaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            loadView(new KassaView());
         }
 
         private void LecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,7 +119,12 @@ namespace SomerenUI
             loadView(new BTWView());
         }
 
-        private void teachersScheduleToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void weekRoosterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadView(new WeekRoosterView());
+        }
+
+        private void teachersSchedulesToolStripMenuItem_Click(object sender, EventArgs e) {
             loadView(new TeachersScheduleView());
         }
     }

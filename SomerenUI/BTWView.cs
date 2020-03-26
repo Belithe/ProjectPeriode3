@@ -53,20 +53,20 @@ namespace SomerenUI
             switch(quarter)
             {
                 case (1): 
-                    startDate = DateTime.Parse("1/1/2020");
-                    endDate = DateTime.Parse("3/31/2020");
+                    startDate = new DateTime(year: 2020, month: 1, day: 1);
+                    endDate = new DateTime(year: 2020, month: 3, day: 31);
                     break;
                 case (2):
-                    startDate = DateTime.Parse("4/1/2020");
-                    endDate = DateTime.Parse("6/30/2020");
+                    startDate = new DateTime(year: 2020, month: 4, day: 1);
+                    endDate = new DateTime(year: 2020, month: 6, day: 30);
                     break;
                 case (3):
-                    startDate = DateTime.Parse("7/1/2020");
-                    endDate = DateTime.Parse("9/30/2020");
+                    startDate = new DateTime(year: 2020, month: 7, day: 1);
+                    endDate = new DateTime(year: 2020, month: 9, day: 30);
                     break;
                 case (4):
-                    startDate = DateTime.Parse("10/1/2020");
-                    endDate = DateTime.Parse("12/31/2020");
+                    startDate = new DateTime(year: 2020, month: 10, day: 1);
+                    endDate = new DateTime(year: 2020, month: 12, day: 31);
                     break;
             }
 

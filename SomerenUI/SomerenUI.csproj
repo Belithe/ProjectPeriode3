@@ -53,6 +53,12 @@
     <Compile Include="BTWView.Designer.cs">
       <DependentUpon>BTWView.cs</DependentUpon>
     </Compile>
+    <Compile Include="KassaView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KassaView.Designer.cs">
+      <DependentUpon>KassaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomsOverviewView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,10 +91,16 @@
     <Compile Include="StudentsView.Designer.cs">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSelectPopup.Designer.cs">
+      <DependentUpon>TeacherSelectPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeachersScheduleView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TeachersScheduleView.Designer.cs">
+    <Compile Include="TeachersScheduleView.designer.cs">
       <DependentUpon>TeachersScheduleView.cs</DependentUpon>
     </Compile>
     <Compile Include="TeachersView.cs">
@@ -97,8 +109,17 @@
     <Compile Include="TeachersView.Designer.cs">
       <DependentUpon>TeachersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="WeekRoosterView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeekRoosterView.Designer.cs">
+      <DependentUpon>WeekRoosterView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BTWView.resx">
       <DependentUpon>BTWView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KassaView.resx">
+      <DependentUpon>KassaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomsOverviewView.resx">
       <DependentUpon>RoomsOverviewView.cs</DependentUpon>
@@ -125,11 +146,17 @@
     <EmbeddedResource Include="StudentsView.resx">
       <DependentUpon>StudentsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSelectPopup.resx">
+      <DependentUpon>TeacherSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeachersScheduleView.resx">
       <DependentUpon>TeachersScheduleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeachersView.resx">
       <DependentUpon>TeachersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeekRoosterView.resx">
+      <DependentUpon>WeekRoosterView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
