@@ -34,6 +34,8 @@ namespace SomerenLogic
         }
 
         public List<Participant> getParticipansByUser(User user) => prt_db.getParticipantByUserId(user.Number);
+        public List<Participant> getParticipantsWithActivity() => prt_db.getParticipantsWithActivity();
+        public List<Participant> getParticipantsWithActivityByUser(User user) => prt_db.getParticipantsWithActivityByUser(user.Number);
         public void setNewUserAsParticipant(Participant participant, User user) => prt_db.setNewUserAsParticipant(participant, user);
     }
 }

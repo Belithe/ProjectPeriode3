@@ -33,5 +33,6 @@ namespace SomerenLogic
         }
 
         public Activity getActivityById(int id) => activitydb.getActiviyById(id);
+        public List<Activity> getActivitiesWithParticipants() => activitydb.getAllActivitiesWithParticipants();
     }
 }

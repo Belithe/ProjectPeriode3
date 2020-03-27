@@ -40,19 +40,16 @@ namespace SomerenUI {
 
             Teacher teacher = (Teacher) teachersComboBox.SelectedItem;
             Participant_Service participant_Service = new Participant_Service();
-            Activity_Service activity_Service = new Activity_Service();
 
             selectedParticipant = null;
             activitiesListView.Items.Clear();
 
-            List<Participant> participantcies = participant_Service.getParticipansByUser(teacher);
+            List<Participant> participantcies = participant_Service.getParticipantsWithActivityByUser(teacher);
 
             foreach (Participant participantcy in participantcies) {
-                Activity activity = activity_Service.getActivityById(participantcy.ActivityId);
-
-                ListViewItem item = new ListViewItem(activity.ActivityName);
+                ListViewItem item = new ListViewItem(participantcy.ParticipatingActivity.ActivityName);
                 item.SubItems.Add(participantcy.ParticipancyType == "CNS" ? "Counsellor" : "Participant");
-                item.SubItems.Add(activity.ActivityStartDate.ToString("HH:mm dd-MM-yyyy"));
+                item.SubItems.Add(participantcy.ParticipatingActivity.ActivityStartDate.ToString("HH:mm dd-MM-yyyy"));
 
                 item.Tag = participantcy;
 
