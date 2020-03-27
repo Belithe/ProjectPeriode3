@@ -37,17 +37,19 @@
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.weekOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teachersSchedulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.roomsOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bTWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.weekRoosterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.roomListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.roomsOverviewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
             this.img_Dashboard = new System.Windows.Forms.PictureBox();
             this.mainViewport = new System.Windows.Forms.Panel();
-            this.teachersSchedulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesOvervoewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateTaxesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
@@ -62,11 +64,7 @@
             this.lecturersToolStripMenuItem,
             this.activitiesToolStripMenuItem,
             this.roomsToolStripMenuItem,
-            this.roomsOverviewToolStripMenuItem,
-            this.kassaToolStripMenuItem,
-            this.salesToolStripMenuItem,
-            this.bTWToolStripMenuItem,
-            this.weekRoosterToolStripMenuItem});
+            this.salesToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -121,52 +119,65 @@
             // activitiesToolStripMenuItem
             // 
             this.activitiesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.weekOverviewToolStripMenuItem,
             this.teachersSchedulesToolStripMenuItem});
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
             this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.activitiesToolStripMenuItem.Text = "Activities";
             // 
+            // weekOverviewToolStripMenuItem
+            // 
+            this.weekOverviewToolStripMenuItem.Name = "weekOverviewToolStripMenuItem";
+            this.weekOverviewToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.weekOverviewToolStripMenuItem.Text = "Week Overview";
+            this.weekOverviewToolStripMenuItem.Click += new System.EventHandler(this.weekOverviewToolStripMenuItem_Click);
+            // 
+            // teachersSchedulesToolStripMenuItem
+            // 
+            this.teachersSchedulesToolStripMenuItem.Name = "teachersSchedulesToolStripMenuItem";
+            this.teachersSchedulesToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.teachersSchedulesToolStripMenuItem.Text = "Teachers Schedules";
+            this.teachersSchedulesToolStripMenuItem.Click += new System.EventHandler(this.teachersSchedulesToolStripMenuItem_Click);
+            // 
             // roomsToolStripMenuItem
             // 
+            this.roomsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.roomListToolStripMenuItem,
+            this.roomsOverviewToolStripMenuItem1});
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
             this.roomsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.roomsToolStripMenuItem.Text = "Rooms";
-            this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
             // 
-            // roomsOverviewToolStripMenuItem
+            // roomListToolStripMenuItem
             // 
-            this.roomsOverviewToolStripMenuItem.Name = "roomsOverviewToolStripMenuItem";
-            this.roomsOverviewToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
-            this.roomsOverviewToolStripMenuItem.Text = "Rooms Overview";
-            this.roomsOverviewToolStripMenuItem.Click += new System.EventHandler(this.roomsOverviewToolStripMenuItem_Click);
+            this.roomListToolStripMenuItem.Name = "roomListToolStripMenuItem";
+            this.roomListToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.roomListToolStripMenuItem.Text = "Room List";
+            this.roomListToolStripMenuItem.Click += new System.EventHandler(this.roomListToolStripMenuItem_Click);
             // 
-            // kassaToolStripMenuItem
+            // roomsOverviewToolStripMenuItem1
             // 
-            this.kassaToolStripMenuItem.Name = "kassaToolStripMenuItem";
-            this.kassaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.kassaToolStripMenuItem.Text = "Kassa";
-            this.kassaToolStripMenuItem.Click += new System.EventHandler(this.KassaToolStripMenuItem_Click);
+            this.roomsOverviewToolStripMenuItem1.Name = "roomsOverviewToolStripMenuItem1";
+            this.roomsOverviewToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.roomsOverviewToolStripMenuItem1.Text = "Rooms Overview";
+            this.roomsOverviewToolStripMenuItem1.Click += new System.EventHandler(this.roomsOverviewToolStripMenuItem1_Click);
             // 
-            // salesToolStripMenuItem
+            // salesToolStripMenuItem1
             // 
-            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-            this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.salesToolStripMenuItem.Text = "Sales";
-            this.salesToolStripMenuItem.Click += new System.EventHandler(this.salesToolStripMenuItem_Click);
+            this.salesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerSalesToolStripMenuItem,
+            this.salesOvervoewToolStripMenuItem,
+            this.calculateTaxesToolStripMenuItem});
+            this.salesToolStripMenuItem1.Name = "salesToolStripMenuItem1";
+            this.salesToolStripMenuItem1.Size = new System.Drawing.Size(45, 20);
+            this.salesToolStripMenuItem1.Text = "Sales";
             // 
-            // bTWToolStripMenuItem
+            // registerSalesToolStripMenuItem
             // 
-            this.bTWToolStripMenuItem.Name = "bTWToolStripMenuItem";
-            this.bTWToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-            this.bTWToolStripMenuItem.Text = "BTW";
-            this.bTWToolStripMenuItem.Click += new System.EventHandler(this.bTWToolStripMenuItem_Click);
-            // 
-            // weekRoosterToolStripMenuItem
-            // 
-            this.weekRoosterToolStripMenuItem.Name = "weekRoosterToolStripMenuItem";
-            this.weekRoosterToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.weekRoosterToolStripMenuItem.Text = "Week Rooster";
-            this.weekRoosterToolStripMenuItem.Click += new System.EventHandler(this.weekRoosterToolStripMenuItem_Click);
+            this.registerSalesToolStripMenuItem.Name = "registerSalesToolStripMenuItem";
+            this.registerSalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerSalesToolStripMenuItem.Text = "Place Order";
+            this.registerSalesToolStripMenuItem.Click += new System.EventHandler(this.registerSalesToolStripMenuItem_Click);
             // 
             // pnl_Dashboard
             // 
@@ -185,7 +196,6 @@
             this.lbl_Dashboard.Size = new System.Drawing.Size(185, 13);
             this.lbl_Dashboard.TabIndex = 1;
             this.lbl_Dashboard.Text = "Welcome to the Someren Application!";
-            this.lbl_Dashboard.Click += new System.EventHandler(this.label1_Click);
             // 
             // img_Dashboard
             // 
@@ -203,12 +213,19 @@
             this.mainViewport.Size = new System.Drawing.Size(938, 455);
             this.mainViewport.TabIndex = 5;
             // 
-            // teachersSchedulesToolStripMenuItem
+            // salesOvervoewToolStripMenuItem
             // 
-            this.teachersSchedulesToolStripMenuItem.Name = "teachersSchedulesToolStripMenuItem";
-            this.teachersSchedulesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.teachersSchedulesToolStripMenuItem.Text = "Teachers Schedules";
-            this.teachersSchedulesToolStripMenuItem.Click += new System.EventHandler(this.teachersSchedulesToolStripMenuItem_Click);
+            this.salesOvervoewToolStripMenuItem.Name = "salesOvervoewToolStripMenuItem";
+            this.salesOvervoewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salesOvervoewToolStripMenuItem.Text = "Sales Overview";
+            this.salesOvervoewToolStripMenuItem.Click += new System.EventHandler(this.salesOvervoewToolStripMenuItem_Click);
+            // 
+            // calculateTaxesToolStripMenuItem
+            // 
+            this.calculateTaxesToolStripMenuItem.Name = "calculateTaxesToolStripMenuItem";
+            this.calculateTaxesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculateTaxesToolStripMenuItem.Text = "Calculate Taxes";
+            this.calculateTaxesToolStripMenuItem.Click += new System.EventHandler(this.calculateTaxesToolStripMenuItem_Click);
             // 
             // SomerenUI
             // 
@@ -248,13 +265,15 @@
         private System.Windows.Forms.ToolStripMenuItem lecturersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roomsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem roomsOverviewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kassaToolStripMenuItem;
         private System.Windows.Forms.Panel mainViewport;
-        private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bTWToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem weekRoosterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teachersSchedulesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem weekOverviewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem roomsOverviewToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem roomListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem registerSalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salesOvervoewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateTaxesToolStripMenuItem;
     }
 }
 
