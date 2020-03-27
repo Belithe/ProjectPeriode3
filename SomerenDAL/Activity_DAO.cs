@@ -20,7 +20,8 @@ namespace SomerenDAL
             return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Activity> getAllActivitiesWithParticipants() {
+        public List<Activity> getAllActivitiesWithParticipants()
+        {
             string query = "SELECT * " +
                             "FROM Activities " +
                             "JOIN Participants ON Activities.ActivityId = Participants.ActivityId " +
@@ -60,26 +61,31 @@ namespace SomerenDAL
             return activities;
         }
 
-        private List<Activity> readTableJoined(DataTable dataTable) {
+        private List<Activity> readTableJoined(DataTable dataTable)
+        {
             Dictionary<int, Activity> activityMap = new Dictionary<int, Activity>();
 
-            foreach (DataRow dataRow in dataTable.Rows) {
-                int activityId = (int) dataRow["ActivityId"];
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                int activityId = (int)dataRow["ActivityId"];
 
-                if (!activityMap.ContainsKey(activityId)) {
-                    activityMap[activityId] = new Activity() {
-                        ActivityId = (int) dataRow["ActivityId"],
-                        ActivityName = (string) dataRow["ActivityName"],
-                        ActivityStartDate = (DateTime) dataRow["StartDateTime"],
-                        ActivityEndDate = (DateTime) dataRow["EndDateTime"]
+                if (!activityMap.ContainsKey(activityId))
+                {
+                    activityMap[activityId] = new Activity()
+                    {
+                        ActivityId = (int)dataRow["ActivityId"],
+                        ActivityName = (string)dataRow["ActivityName"],
+                        ActivityStartDate = (DateTime)dataRow["StartDateTime"],
+                        ActivityEndDate = (DateTime)dataRow["EndDateTime"]
                     };
                 }
 
-                activityMap[activityId].addParticipant(new Participant() {
-                    UserId = (int) dataRow["UserId"],
-                    ParticipancyType = (string) dataRow["ParticipancyType"],
-                    Number = (int) dataRow["UserId"],
-                    Name = (string) dataRow["Name"],
+                activityMap[activityId].addParticipant(new Participant()
+                {
+                    UserId = (int)dataRow["UserId"],
+                    ParticipancyType = (string)dataRow["ParticipancyType"],
+                    Number = (int)dataRow["UserId"],
+                    Name = (string)dataRow["Name"],
                     ParticipatingActivity = activityMap[activityId]
                 });
             }
