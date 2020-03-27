@@ -22,7 +22,7 @@ namespace SomerenUI {
         public void refreshTeachers() {
             Teacher_Services teacherServices = new Teacher_Services();
 
-            List<Teacher> teachers = teacherServices.GetTeachers();
+            List<Teacher> teachers = teacherServices.getTeachers();
 
             teachersComboBox.Items.Clear();
 
@@ -40,19 +40,16 @@ namespace SomerenUI {
 
             Teacher teacher = (Teacher) teachersComboBox.SelectedItem;
             Participant_Service participant_Service = new Participant_Service();
-            Activity_Service activity_Service = new Activity_Service();
 
             selectedParticipant = null;
             activitiesListView.Items.Clear();
 
-            List<Participant> participantcies = participant_Service.getParticipansByUser(teacher);
+            List<Participant> participantcies = participant_Service.getParticipantsWithActivityByUser(teacher);
 
             foreach (Participant participantcy in participantcies) {
-                Activity activity = activity_Service.GetActivityById(participantcy.ActivityId);
-
-                ListViewItem item = new ListViewItem(activity.ActivityName);
+                ListViewItem item = new ListViewItem(participantcy.ParticipatingActivity.ActivityName);
                 item.SubItems.Add(participantcy.ParticipancyType == "CNS" ? "Counsellor" : "Participant");
-                item.SubItems.Add(activity.ActivityStartDate.ToString("HH:mm dd-MM-yyyy"));
+                item.SubItems.Add(participantcy.ParticipatingActivity.ActivityStartDate.ToString("HH:mm dd-MM-yyyy"));
 
                 item.Tag = participantcy;
 
@@ -79,33 +76,37 @@ namespace SomerenUI {
 
             Dictionary<string, object> dataTransferObject = new Dictionary<string, object>();
 
+            // Show popup
             Form popup = new TeacherSelectPopup(dataTransferObject);
             popup.ShowDialog();
 
-            Teacher replacementTeacher = (Teacher) dataTransferObject["selectedTeacher"];
+            // Checks whether or not the dialog has been force closed or by selecting a teacher
+            if (dataTransferObject.ContainsKey("selectedTeacher")) {
+                Teacher replacementTeacher = (Teacher) dataTransferObject["selectedTeacher"];
 
-            Teacher_Services teacher_Services = new Teacher_Services();
-            Activity_Service activity_Service = new Activity_Service();
-            
-            Activity activity = activity_Service.GetActivityById(selectedParticipant.ActivityId);
+                Teacher_Services teacher_Services = new Teacher_Services();
+                Activity_Service activity_Service = new Activity_Service();
 
-            bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, activity.ActivityStartDate, activity.ActivityEndDate);
+                Activity activity = activity_Service.getActivityById(selectedParticipant.ActivityId);
 
-            if (isAvailable) {
-                DialogResult result = MessageBox.Show($"Are you sure you want to replace the selected activity with {replacementTeacher}", "Confirm", MessageBoxButtons.YesNo);
-            
-                if (result == DialogResult.Yes) {
-                    Participant_Service participant_Service = new Participant_Service();
+                bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, activity.ActivityStartDate, activity.ActivityEndDate);
 
-                    participant_Service.setNewUserAsParticipant(selectedParticipant, replacementTeacher);
+                if (isAvailable) {
+                    DialogResult result = MessageBox.Show($"Are you sure you want to replace the selected activity with {replacementTeacher}", "Confirm", MessageBoxButtons.YesNo);
 
-                    MessageBox.Show("Changed have been made");
+                    if (result == DialogResult.Yes) {
+                        Participant_Service participant_Service = new Participant_Service();
 
-                    refreshTeachers();
-                    teachersComboBox.SelectedIndex = -1;
+                        participant_Service.setNewUserAsParticipant(selectedParticipant, replacementTeacher);
+
+                        MessageBox.Show("Changed have been made");
+
+                        refreshTeachers();
+                        teachersComboBox.SelectedIndex = -1;
+                    }
+                } else {
+                    MessageBox.Show("Selected replacement teacher is not available when the activity takes place.");
                 }
-            } else {
-                MessageBox.Show("Selected replacement teacher is not available when the activity takes place.");
             }
         }
     }

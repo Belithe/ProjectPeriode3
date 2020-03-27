@@ -10,16 +10,16 @@ using SomerenModel;
 
 namespace SomerenDAL {
     public class User_DAO: Base {
-        public List<User> Db_Get_Users_By_Room_Number(int roomNumber) {
+        public List<User> getUsersByRoomNumber(int roomNumber) {
             string query = $"SELECT UserId, Name FROM Users WHERE RoomNumber = @roomNumber";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@roomNumber", roomNumber);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<User> ReadTables(DataTable dataTable) {
+        private List<User> readTable(DataTable dataTable) {
             List<User> users = new List<User>();
 
             foreach (DataRow dr in dataTable.Rows) {

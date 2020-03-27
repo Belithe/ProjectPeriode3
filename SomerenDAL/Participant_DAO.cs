@@ -14,36 +14,58 @@ namespace SomerenDAL
     public class Participant_DAO : Base
     {
 
-        public List<Participant> Db_Get_All_Participants()
+        public List<Participant> getAllParticipants()
         {
             string query = "SELECT * FROM Participants";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Participant> Db_Get_Participants_By_UserId(int id)
+        public List<Participant> getParticipantByUserId(int id)
         {
             string query = $"SELECT * FROM Participants WHERE UserId = @id";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@id", id);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public void Db_Set_New_User_As_Participant(Participant participant, User newUser) {
+        public List<Participant> getParticipantsWithActivity() {
+            string query = "SELECT * " +
+                            "FROM Participants " +
+                            "JOIN Activities ON Participants.ActivityId = Activities.ActivityId";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return readTableJoined(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<Participant> getParticipantsWithActivityByUser(int id) {
+            string query = "SELECT * " +
+                            "FROM Participants " +
+                            "JOIN Activities ON Participants.ActivityId = Activities.ActivityId " +
+                            "WHERE UserId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
+            return readTableJoined(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public void setNewUserAsParticipant(Participant participant, User newUser) {
             string query = "UPDATE Participants " +
                             "SET UserId = @newUserId " +
-                            "WHERE UserId = @oldUserId";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
+                            "WHERE ActivityId = @activityId AND UserId = @oldUserId";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
 
-            sqlParameters[0] = new SqlParameter("@oldUserId", participant.UserId);
-            sqlParameters[1] = new SqlParameter("@newUserId", newUser.Number);
+            sqlParameters[0] = new SqlParameter("@activityId", participant.ActivityId);
+            sqlParameters[1] = new SqlParameter("@oldUserId", participant.UserId);
+            sqlParameters[2] = new SqlParameter("@newUserId", newUser.Number);
 
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        private List<Participant> ReadTables(DataTable dataTable)
+        private List<Participant> readTable(DataTable dataTable)
         {
             List<Participant> participants = new List<Participant>();
 
@@ -56,6 +78,26 @@ namespace SomerenDAL
                     ParticipancyType = (string)dr["ParticipancyType"]
                 };
                 participants.Add(participant);
+            }
+
+            return participants;
+        }
+
+        private List<Participant> readTableJoined(DataTable dataTable) {
+            List<Participant> participants = new List<Participant>();
+
+            foreach (DataRow dataRow in dataTable.Rows) {
+                participants.Add(new Participant() {
+                    ActivityId = (int) dataRow["ActivityId"],
+                    UserId = (int) dataRow["UserId"],
+                    ParticipancyType = (string) dataRow["ParticipancyType"],
+                    ParticipatingActivity = new Activity() {
+                        ActivityId = (int) dataRow["ActivityId"],
+                        ActivityName = (string) dataRow["ActivityName"],
+                        ActivityStartDate = (DateTime) dataRow["StartDateTime"],
+                        ActivityEndDate = (DateTime) dataRow["EndDateTime"]
+                    }
+                });
             }
 
             return participants;

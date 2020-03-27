@@ -23,7 +23,7 @@ namespace SomerenUI {
 
             Sales_Services sales_Services = new Sales_Services();
 
-            List<Sale> sales = sales_Services.getByDateRange(startDateTime, endDateTime);
+            List<Sale> sales = sales_Services.getSalesByDateRange(startDateTime, endDateTime);
 
             salesList.Items.Clear();
 

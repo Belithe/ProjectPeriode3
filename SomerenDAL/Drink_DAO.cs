@@ -13,24 +13,24 @@ namespace SomerenDAL
 {
     public class Drink_DAO : Base
     {
-        public List<Drink> Db_Get_All_Drinks()
+        public List<Drink> getAllDrinks()
         {
             string query = "SELECT * FROM Drinks";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Drink> Db_Get_Drink_By_Name(string name)
+        public Drink getDrinkByName(string name)
         {
             string query = $"SELECT * FROM Drinks WHERE DrinkName = @name";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@name", name);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
-        private List<Drink> ReadTables(DataTable dataTable)
+        private List<Drink> readTable(DataTable dataTable)
         {
             List<Drink> drinks = new List<Drink>();
 

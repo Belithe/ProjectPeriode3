@@ -13,11 +13,11 @@ namespace SomerenLogic
     {
         Student_DAO student_db = new Student_DAO();
 
-        public List<Student> GetStudents()
+        public List<Student> getStudents()
         {
             try
             {
-                List<Student> students = student_db.Db_Get_All_Students();
+                List<Student> students = student_db.getAllStudents();
                 return students;
             }
             catch (Exception)

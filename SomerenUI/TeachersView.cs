@@ -12,7 +12,7 @@ namespace SomerenUI {
 
         public void refreshTeachers() {
             Teacher_Services lectService = new Teacher_Services();
-            List<Teacher> lecturerList = lectService.GetTeachers();
+            List<Teacher> lecturerList = lectService.getTeachers();
 
             // clear the listview before filling it again
             listViewTeachers.Items.Clear();
