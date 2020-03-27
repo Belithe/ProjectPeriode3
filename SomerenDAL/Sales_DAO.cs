@@ -70,5 +70,12 @@ namespace SomerenDAL
 
             return salesMap.Values.ToList();
         }
+
+        public void Db_Save_New_Sale(string drink)
+        {
+            string query = ($"INSERT INTO Sales (OrderId, DrinkName, Revenue, OrderAmount, OrderDateTime) VALUES (7, '{drink}', 1, 2.00, '20200326 19:00:00')");
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

@@ -95,3 +95,15 @@ C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLo
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.dll
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenLogic\obj\Debug\SomerenLogic.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenLogic.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenLogic.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenDAL.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenModel.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenDAL.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\bin\Debug\SomerenModel.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\obj\Debug\SomerenLogic.csproj.CoreCompileInputs.cache
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\obj\Debug\SomerenLogic.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenLogic\obj\Debug\SomerenLogic.pdb
