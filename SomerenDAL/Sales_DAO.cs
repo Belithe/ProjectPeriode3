@@ -27,8 +27,11 @@ namespace SomerenDAL
             string query = "SELECT * " +
                             "FROM Sales " +
                             "JOIN Drinks ON Sales.DrinkName = Drinks.DrinkName " +
-                            $"WHERE Sale.OrderId = {id}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+                            $"WHERE Sale.OrderId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
@@ -39,8 +42,12 @@ namespace SomerenDAL
             string query = "SELECT * " +
                             "FROM Sales " +
                             "JOIN Drinks ON Sales.DrinkName = Drinks.DrinkName " +
-                            $"WHERE OrderDateTime >= '{startDateTimeString}' AND OrderDateTime <= '{endDateTimeString}';";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+                            $"WHERE OrderDateTime >= @startDateTimeString AND OrderDateTime <= @endDateTimeString;";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+
+            sqlParameters[0] = new SqlParameter("@startDateTimeString", startDateTimeString);
+            sqlParameters[1] = new SqlParameter("@endDateTimeString", endDateTimeString);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 

@@ -23,8 +23,11 @@ namespace SomerenDAL
 
         public List<Participant> Db_Get_Participants_By_UserId(int id)
         {
-            string query = $"SELECT * FROM Participants WHERE UserId = {id}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT * FROM Participants WHERE UserId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 

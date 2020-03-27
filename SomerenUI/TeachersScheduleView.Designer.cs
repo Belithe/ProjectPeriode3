@@ -90,7 +90,7 @@
             this.btnChangeCounsellor.Name = "btnChangeCounsellor";
             this.btnChangeCounsellor.Size = new System.Drawing.Size(178, 23);
             this.btnChangeCounsellor.TabIndex = 10;
-            this.btnChangeCounsellor.Text = "Regel vervanging";
+            this.btnChangeCounsellor.Text = "Search replacement";
             this.btnChangeCounsellor.UseVisualStyleBackColor = true;
             this.btnChangeCounsellor.Click += new System.EventHandler(this.btnChangeCounsellor_Click);
             // 

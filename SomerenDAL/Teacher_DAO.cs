@@ -17,8 +17,11 @@ namespace SomerenDAL {
         }
 
         public List<Teacher> Db_Get_Teacher_By_Id(int id) {
-            string query = $"SELECT UserId, Name FROM Users WHERE UserType = 'PRF' AND UserId = {id}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT UserId, Name FROM Users WHERE UserType = 'PRF' AND UserId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
