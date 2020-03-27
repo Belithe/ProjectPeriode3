@@ -51,20 +51,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(21, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 39);
+            this.label1.Size = new System.Drawing.Size(107, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Activities";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SomerenUI.Properties.Resources.someren;
-            this.pictureBox1.Location = new System.Drawing.Point(1242, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(828, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(110, 110);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -77,9 +75,10 @@
             this.StartDt,
             this.EndDt});
             this.activityListView.HideSelection = false;
-            this.activityListView.Location = new System.Drawing.Point(39, 86);
+            this.activityListView.Location = new System.Drawing.Point(26, 56);
+            this.activityListView.Margin = new System.Windows.Forms.Padding(2);
             this.activityListView.Name = "activityListView";
-            this.activityListView.Size = new System.Drawing.Size(1177, 357);
+            this.activityListView.Size = new System.Drawing.Size(786, 233);
             this.activityListView.TabIndex = 10;
             this.activityListView.UseCompatibleStateImageBehavior = false;
             this.activityListView.View = System.Windows.Forms.View.Details;
@@ -107,9 +106,10 @@
             // btndel
             // 
             this.btndel.Enabled = false;
-            this.btndel.Location = new System.Drawing.Point(46, 605);
+            this.btndel.Location = new System.Drawing.Point(31, 393);
+            this.btndel.Margin = new System.Windows.Forms.Padding(2);
             this.btndel.Name = "btndel";
-            this.btndel.Size = new System.Drawing.Size(138, 60);
+            this.btndel.Size = new System.Drawing.Size(92, 39);
             this.btndel.TabIndex = 11;
             this.btndel.Text = "DELETE";
             this.btndel.UseVisualStyleBackColor = true;
@@ -117,9 +117,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(39, 470);
+            this.btnAdd.Location = new System.Drawing.Point(26, 305);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 47);
+            this.btnAdd.Size = new System.Drawing.Size(100, 31);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -127,17 +128,19 @@
             // 
             // tboxName
             // 
-            this.tboxName.Location = new System.Drawing.Point(195, 508);
+            this.tboxName.Location = new System.Drawing.Point(130, 330);
+            this.tboxName.Margin = new System.Windows.Forms.Padding(2);
             this.tboxName.Name = "tboxName";
-            this.tboxName.Size = new System.Drawing.Size(174, 26);
+            this.tboxName.Size = new System.Drawing.Size(117, 20);
             this.tboxName.TabIndex = 13;
             // 
             // btnEdit
             // 
             this.btnEdit.Enabled = false;
-            this.btnEdit.Location = new System.Drawing.Point(39, 523);
+            this.btnEdit.Location = new System.Drawing.Point(26, 340);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(150, 47);
+            this.btnEdit.Size = new System.Drawing.Size(100, 31);
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -146,27 +149,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 485);
+            this.label2.Location = new System.Drawing.Point(130, 315);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(621, 483);
+            this.label3.Location = new System.Drawing.Point(414, 314);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "end time";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(386, 483);
+            this.label4.Location = new System.Drawing.Point(257, 314);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "start time";
             // 
@@ -174,23 +180,25 @@
             // 
             this.dateTimePickerEnd.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(625, 508);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(417, 330);
+            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(204, 26);
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(137, 20);
             this.dateTimePickerEnd.TabIndex = 21;
             // 
             // dateTimePickerStart
             // 
             this.dateTimePickerStart.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStart.Location = new System.Drawing.Point(390, 508);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(260, 330);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(202, 26);
+            this.dateTimePickerStart.Size = new System.Drawing.Size(136, 20);
             this.dateTimePickerStart.TabIndex = 22;
             // 
             // ActivityView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dateTimePickerStart);
             this.Controls.Add(this.dateTimePickerEnd);
@@ -204,7 +212,8 @@
             this.Controls.Add(this.activityListView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Size = new System.Drawing.Size(1407, 700);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Size = new System.Drawing.Size(938, 455);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

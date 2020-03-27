@@ -102,8 +102,10 @@ namespace SomerenUI
             }
             if (drink != "" & studentnr != "")
             {
-                salesquery.Db_Save_New_Sale(drink);
+                salesquery.createNewSale(drink);
             }
+
+            MessageBox.Show("Order Made");
 
             refreshStudents();
             refreshDrinks();

@@ -78,7 +78,7 @@ namespace SomerenDAL
             return salesMap.Values.ToList();
         }
 
-        public void Db_Save_New_Sale(string drink)
+        public void createNewSale(string drink)
         {
             Random x = new Random();
             string query = ($"INSERT INTO Sales (OrderId, DrinkName, Revenue, OrderAmount, OrderDateTime) VALUES ({x.Next(0,999999)}, '{drink}', 1, 2.00, '20200326 19:00:00')");

@@ -19,12 +19,15 @@ namespace SomerenUI
         public ActivityView()
         {
             InitializeComponent();
-            Load_Activities();
+            refreshActivities();
 
         }
 
-        public void Load_Activities()
+        public void refreshActivities()
         {
+            btndel.Enabled = false;
+            btnEdit.Enabled = false;
+
             Activity_DAO activity_dao = new Activity_DAO();
             List<Activity> activity_list = activity_dao.getAllActivities();
 
@@ -41,8 +44,6 @@ namespace SomerenUI
                 entry.SubItems.Add(item.ActivityEndDate.ToString());
 
                 activityListView.Items.Add(entry);
-
-
             }
         }
 
@@ -53,14 +54,11 @@ namespace SomerenUI
                 if (i != e.Index)
                 {
                     activityListView.Items[i].Checked = false;
-                    btndel.Enabled = false;
-                    btnEdit.Enabled = false;
-
                 }
             }
 
-            btndel.Enabled = e.Index >= 0;
-            btnEdit.Enabled = e.Index >= 0;
+            btndel.Enabled = e.NewValue == CheckState.Checked;
+            btnEdit.Enabled = e.NewValue == CheckState.Checked;
             tboxName.Text = activityListView.Items[e.Index].SubItems[1].Text;
             dateTimePickerStart.Text = activityListView.Items[e.Index].SubItems[2].Text;
             dateTimePickerEnd.Text = activityListView.Items[e.Index].SubItems[3].Text;
@@ -79,7 +77,7 @@ namespace SomerenUI
             }
 
             activity_dao.delActivityById(activityDelId);
-            Load_Activities();
+            refreshActivities();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -88,7 +86,7 @@ namespace SomerenUI
 
             
             activity_dao.addNewActivity(tboxName.Text,dateTimePickerStart.Value, dateTimePickerEnd.Value);
-            Load_Activities();
+            refreshActivities();
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -105,7 +103,7 @@ namespace SomerenUI
             }
 
             activity_dao.updateActivityById(activityUpId, tboxName.Text, dateTimePickerStart.Value, dateTimePickerEnd.Value);
-            Load_Activities();
+            refreshActivities();
         }
     }
 }
