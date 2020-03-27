@@ -71,6 +71,11 @@ namespace SomerenUI
             showPanel("Dashboard");
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void img_Dashboard_Click(object sender, EventArgs e)
         {
             MessageBox.Show("What happens in Someren, stays in Someren!");
@@ -79,6 +84,25 @@ namespace SomerenUI
         private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadView(new StudentsView());
+        }
+
+        private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadView(new RoomsView());
+        }
+
+        private void listViewRooms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomsOverviewToolStripMenuItem_Click(object sender, EventArgs e) {
+            loadView(new RoomsOverviewView());
+        }
+
+        private void KassaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadView(new KassaView());
         }
 
         private void LecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,32 +114,18 @@ namespace SomerenUI
             loadView(new SalesView());
         }
 
-        private void teachersSchedulesToolStripMenuItem_Click(object sender, EventArgs e) {
-            loadView(new TeachersScheduleView());
+        private void bTWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadView(new BTWView());
         }
 
-        private void weekOverviewToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void weekRoosterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             loadView(new WeekRoosterView());
         }
 
-        private void roomsOverviewToolStripMenuItem1_Click(object sender, EventArgs e) {
-            loadView(new RoomsOverviewView());
-        }
-
-        private void roomListToolStripMenuItem_Click(object sender, EventArgs e) {
-            loadView(new RoomsView());
-        }
-
-        private void registerSalesToolStripMenuItem_Click(object sender, EventArgs e) {
-            loadView(new KassaView());
-        }
-
-        private void salesOvervoewToolStripMenuItem_Click(object sender, EventArgs e) {
-            loadView(new SalesView());
-        }
-
-        private void calculateTaxesToolStripMenuItem_Click(object sender, EventArgs e) {
-            loadView(new BTWView());
+        private void teachersSchedulesToolStripMenuItem_Click(object sender, EventArgs e) {
+            loadView(new TeachersScheduleView());
         }
 
         private void ActivitiesToolStripMenuItem1_Click(object sender, EventArgs e)
