@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SomerenLogic;
 using SomerenModel;
+using SomerenDAL;
 
 namespace SomerenUI
 {
@@ -55,6 +56,60 @@ namespace SomerenUI
                 listViewDrinks.Items.Add(item);
             }
         }
+
+        private void ListViewDrinks_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < listViewDrinks.Items.Count; ++i)
+            {
+                if (i != e.Index)
+                {
+                    listViewDrinks.Items[i].Checked = false;
+                }
+            }
+        }
+
+        private void ListViewStudentsKassa_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < listViewStudentsKassa.Items.Count; ++i)
+            {
+                if (i != e.Index)
+                {
+                    listViewStudentsKassa.Items[i].Checked = false;
+                }
+            }
+        }
+
+        private void Btn_AddSale_Click(object sender, EventArgs e)
+        {
+            Sales_DAO salesquery = new Sales_DAO();
+            string drink = "";
+            string studentnr = "";
+
+            for (int i = 0; i < listViewDrinks.Items.Count; i++)
+            {
+                if (listViewDrinks.Items[i].Checked)
+                {
+                    drink = listViewDrinks.Items[i].Text;
+                }
+            }
+
+            for (int i = 0; i < listViewStudentsKassa.Items.Count; i++)
+            {
+                if (listViewStudentsKassa.Items[i].Checked)
+                {
+                    studentnr = listViewStudentsKassa.Items[i].Text;
+                }
+            }
+            if (drink != "" & studentnr != "")
+            {
+                salesquery.Db_Save_New_Sale(drink);
+            }
+
+            refreshStudents();
+            refreshDrinks();
+        }
+
+
 
         //private void listViewStudentsKassa_ItemCheck(object sender, ItemCheckEventArgs e)
         //{

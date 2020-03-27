@@ -34,3 +34,9 @@ D:\Documents\inHolland\ProjectPeriode3\SomerenModel\bin\Debug\SomerenModel.pdb
 D:\Documents\inHolland\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
 D:\Documents\inHolland\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.dll
 D:\Documents\inHolland\ProjectPeriode3\SomerenModel\obj\Debug\SomerenModel.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenModel\bin\Debug\SomerenModel.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenModel\bin\Debug\SomerenModel.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenModel\obj\Debug\SomerenModel.csproj.CoreCompileInputs.cache
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenModel\obj\Debug\SomerenModel.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenModel\obj\Debug\SomerenModel.pdb

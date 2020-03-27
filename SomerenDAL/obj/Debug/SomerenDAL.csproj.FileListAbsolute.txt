@@ -78,3 +78,13 @@ C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.dll
 C:\Users\arjan\Documents\GitHub\ProjectPeriode3\SomerenDAL\obj\Debug\SomerenDAL.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\bin\Debug\SomerenDAL.dll.config
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\bin\Debug\SomerenDAL.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\bin\Debug\SomerenDAL.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\bin\Debug\SomerenModel.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\bin\Debug\SomerenModel.pdb
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\obj\Debug\SomerenDAL.csprojAssemblyReference.cache
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\obj\Debug\SomerenDAL.csproj.CoreCompileInputs.cache
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\obj\Debug\SomerenDAL.csproj.CopyComplete
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\obj\Debug\SomerenDAL.dll
+C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenDAL\obj\Debug\SomerenDAL.pdb
