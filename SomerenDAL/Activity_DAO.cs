@@ -22,8 +22,11 @@ namespace SomerenDAL
 
         public List<Activity> Db_Get_Activity_By_Id(int id)
         {
-            string query = $"SELECT * FROM Activities WHERE ActivityId = {id}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT * FROM Activities WHERE ActivityId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
