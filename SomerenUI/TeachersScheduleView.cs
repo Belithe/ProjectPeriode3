@@ -85,11 +85,8 @@ namespace SomerenUI {
                 Teacher replacementTeacher = (Teacher) dataTransferObject["selectedTeacher"];
 
                 Teacher_Services teacher_Services = new Teacher_Services();
-                Activity_Service activity_Service = new Activity_Service();
 
-                Activity activity = activity_Service.getActivityById(selectedParticipant.ActivityId);
-
-                bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, activity.ActivityStartDate, activity.ActivityEndDate);
+                bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, selectedParticipant.ParticipatingActivity.ActivityStartDate, selectedParticipant.ParticipatingActivity.ActivityEndDate);
 
                 if (isAvailable) {
                     DialogResult result = MessageBox.Show($"Are you sure you want to replace the selected activity with {replacementTeacher}", "Confirm", MessageBoxButtons.YesNo);
