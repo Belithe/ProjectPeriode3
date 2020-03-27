@@ -79,33 +79,37 @@ namespace SomerenUI {
 
             Dictionary<string, object> dataTransferObject = new Dictionary<string, object>();
 
+            // Show popup
             Form popup = new TeacherSelectPopup(dataTransferObject);
             popup.ShowDialog();
 
-            Teacher replacementTeacher = (Teacher) dataTransferObject["selectedTeacher"];
+            // Checks whether or not the dialog has been force closed or by selecting a teacher
+            if (dataTransferObject.ContainsKey("selectedTeacher")) {
+                Teacher replacementTeacher = (Teacher) dataTransferObject["selectedTeacher"];
 
-            Teacher_Services teacher_Services = new Teacher_Services();
-            Activity_Service activity_Service = new Activity_Service();
-            
-            Activity activity = activity_Service.getActivityById(selectedParticipant.ActivityId);
+                Teacher_Services teacher_Services = new Teacher_Services();
+                Activity_Service activity_Service = new Activity_Service();
 
-            bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, activity.ActivityStartDate, activity.ActivityEndDate);
+                Activity activity = activity_Service.getActivityById(selectedParticipant.ActivityId);
 
-            if (isAvailable) {
-                DialogResult result = MessageBox.Show($"Are you sure you want to replace the selected activity with {replacementTeacher}", "Confirm", MessageBoxButtons.YesNo);
-            
-                if (result == DialogResult.Yes) {
-                    Participant_Service participant_Service = new Participant_Service();
+                bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, activity.ActivityStartDate, activity.ActivityEndDate);
 
-                    participant_Service.setNewUserAsParticipant(selectedParticipant, replacementTeacher);
+                if (isAvailable) {
+                    DialogResult result = MessageBox.Show($"Are you sure you want to replace the selected activity with {replacementTeacher}", "Confirm", MessageBoxButtons.YesNo);
 
-                    MessageBox.Show("Changed have been made");
+                    if (result == DialogResult.Yes) {
+                        Participant_Service participant_Service = new Participant_Service();
 
-                    refreshTeachers();
-                    teachersComboBox.SelectedIndex = -1;
+                        participant_Service.setNewUserAsParticipant(selectedParticipant, replacementTeacher);
+
+                        MessageBox.Show("Changed have been made");
+
+                        refreshTeachers();
+                        teachersComboBox.SelectedIndex = -1;
+                    }
+                } else {
+                    MessageBox.Show("Selected replacement teacher is not available when the activity takes place.");
                 }
-            } else {
-                MessageBox.Show("Selected replacement teacher is not available when the activity takes place.");
             }
         }
     }

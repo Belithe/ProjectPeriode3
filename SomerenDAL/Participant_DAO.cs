@@ -34,11 +34,12 @@ namespace SomerenDAL
         public void setNewUserAsParticipant(Participant participant, User newUser) {
             string query = "UPDATE Participants " +
                             "SET UserId = @newUserId " +
-                            "WHERE UserId = @oldUserId";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
+                            "WHERE ActivityId = @activityId AND UserId = @oldUserId";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
 
-            sqlParameters[0] = new SqlParameter("@oldUserId", participant.UserId);
-            sqlParameters[1] = new SqlParameter("@newUserId", newUser.Number);
+            sqlParameters[0] = new SqlParameter("@activityId", participant.ActivityId);
+            sqlParameters[1] = new SqlParameter("@oldUserId", participant.UserId);
+            sqlParameters[2] = new SqlParameter("@newUserId", newUser.Number);
 
             ExecuteEditQuery(query, sqlParameters);
         }
