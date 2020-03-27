@@ -9,16 +9,9 @@ using SomerenModel;
 namespace SomerenLogic {
     public class Room_Overview_Services {
         public List<Room> getRoomsOverview() {
-            Room_DAO roomDao = new Room_DAO();
-            User_DAO userDao = new User_DAO();
+            Room_DAO room_DAO = new Room_DAO();
 
-            List<Room> rooms = roomDao.Db_Get_All_Rooms();
-
-            foreach (Room room in rooms) {
-                room.addUsersToRoom(userDao.Db_Get_Users_By_Room_Number(room.Number));
-            }
-
-            return rooms;
+            return room_DAO.Db_Get_All_Rooms_With_Users();
         }
     }
 }
