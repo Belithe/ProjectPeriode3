@@ -16,15 +16,21 @@ namespace SomerenDAL {
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Room> Db_Get_Room_By_Number(int number) {
-            string query = $"SELECT * FROM Rooms WHERE RoomNumber = {number}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+        public List<Room> Db_Get_Room_By_Number(int roomNumber) {
+            string query = $"SELECT * FROM Rooms WHERE RoomNumber = @roomNumber";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@roomNumber", roomNumber);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public List<Room> Db_Get_Room_By_Type(string roomType) {
-            string query = $"SELECT * FROM Rooms WHERE RoomType = {roomType}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT * FROM Rooms WHERE RoomType = @roomType";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@roomType", roomType);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 

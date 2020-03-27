@@ -22,8 +22,11 @@ namespace SomerenDAL
 
         public List<Drink> Db_Get_Drink_By_Name(string name)
         {
-            string query = $"SELECT * FROM Drinks WHERE DrinkName = '{name}'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = $"SELECT * FROM Drinks WHERE DrinkName = @name";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@name", name);
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
