@@ -31,6 +31,19 @@ namespace SomerenDAL
             return readTableJoined(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public List<Activity> getActivitiesWithParticipantsById(int id) {
+            string query = "SELECT * " +
+                            "FROM Activities " +
+                            "JOIN Participants ON Activities.ActivityId = Participants.ActivityId " +
+                            "JOIN Users ON Participants.UserId = Users.UserId " +
+                            "WHERE ActivityId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
+            return readTableJoined(ExecuteSelectQuery(query, sqlParameters));
+        }
+
         public Activity getActiviyById(int id)
         {
             string query = $"SELECT * FROM Activities WHERE ActivityId = @id";
