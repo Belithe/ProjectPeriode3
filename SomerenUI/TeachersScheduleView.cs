@@ -22,7 +22,7 @@ namespace SomerenUI {
         public void refreshTeachers() {
             Teacher_Services teacherServices = new Teacher_Services();
 
-            List<Teacher> teachers = teacherServices.GetTeachers();
+            List<Teacher> teachers = teacherServices.getTeachers();
 
             teachersComboBox.Items.Clear();
 
@@ -48,7 +48,7 @@ namespace SomerenUI {
             List<Participant> participantcies = participant_Service.getParticipansByUser(teacher);
 
             foreach (Participant participantcy in participantcies) {
-                Activity activity = activity_Service.GetActivityById(participantcy.ActivityId);
+                Activity activity = activity_Service.getActivityById(participantcy.ActivityId);
 
                 ListViewItem item = new ListViewItem(activity.ActivityName);
                 item.SubItems.Add(participantcy.ParticipancyType == "CNS" ? "Counsellor" : "Participant");
@@ -87,7 +87,7 @@ namespace SomerenUI {
             Teacher_Services teacher_Services = new Teacher_Services();
             Activity_Service activity_Service = new Activity_Service();
             
-            Activity activity = activity_Service.GetActivityById(selectedParticipant.ActivityId);
+            Activity activity = activity_Service.getActivityById(selectedParticipant.ActivityId);
 
             bool isAvailable = teacher_Services.isAvailableBetween(replacementTeacher, activity.ActivityStartDate, activity.ActivityEndDate);
 

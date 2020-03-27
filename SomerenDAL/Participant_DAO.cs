@@ -14,24 +14,24 @@ namespace SomerenDAL
     public class Participant_DAO : Base
     {
 
-        public List<Participant> Db_Get_All_Participants()
+        public List<Participant> getAllParticipants()
         {
             string query = "SELECT * FROM Participants";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Participant> Db_Get_Participants_By_UserId(int id)
+        public List<Participant> getParticipantByUserId(int id)
         {
             string query = $"SELECT * FROM Participants WHERE UserId = @id";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@id", id);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public void Db_Set_New_User_As_Participant(Participant participant, User newUser) {
+        public void setNewUserAsParticipant(Participant participant, User newUser) {
             string query = "UPDATE Participants " +
                             "SET UserId = @newUserId " +
                             "WHERE UserId = @oldUserId";
@@ -43,7 +43,7 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        private List<Participant> ReadTables(DataTable dataTable)
+        private List<Participant> readTable(DataTable dataTable)
         {
             List<Participant> participants = new List<Participant>();
 

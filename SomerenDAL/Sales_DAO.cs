@@ -13,16 +13,16 @@ namespace SomerenDAL
 {
     public class Sales_DAO : Base
     {
-        public List<Sale> Db_Get_All_Sales()
+        public List<Sale> getAllSales()
         {
             string query = "SELECT *" +
                             "FROM Sales" +
                             "JOIN Drinks ON Sales.DrinkName = Drinks.DrinkName;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public Sale Db_Get_Sale_By_Id(int id)
+        public Sale getSaleById(int id)
         {
             string query = "SELECT * " +
                             "FROM Sales " +
@@ -32,10 +32,10 @@ namespace SomerenDAL
 
             sqlParameters[0] = new SqlParameter("@id", id);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters))[0];
+            return readTable(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
-        public List<Sale> Db_Get_Sale_By_Date_Range(DateTime startDateTime, DateTime endDateTime) {
+        public List<Sale> getSalesByDateRange(DateTime startDateTime, DateTime endDateTime) {
             string startDateTimeString = startDateTime.ToString("yyyy-MM-dd HH:mm:ss");
             string endDateTimeString = endDateTime.ToString("yyyy-MM-dd HH:mm:ss");
 
@@ -48,10 +48,10 @@ namespace SomerenDAL
             sqlParameters[0] = new SqlParameter("@startDateTimeString", startDateTimeString);
             sqlParameters[1] = new SqlParameter("@endDateTimeString", endDateTimeString);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<Sale> ReadTables(DataTable dataTable)
+        private List<Sale> readTable(DataTable dataTable)
         {
             Dictionary<int, Sale> salesMap = new Dictionary<int, Sale>();
 

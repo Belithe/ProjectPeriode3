@@ -10,10 +10,10 @@ namespace SomerenLogic {
     public class Room_Service {
         Room_DAO room_db = new Room_DAO();
 
-        public List<Room> GetRooms() {
+        public List<Room> getRooms() {
             try
             {
-                List<Room> room = room_db.Db_Get_All_Rooms();
+                List<Room> room = room_db.getAllRooms();
                 return room;
             } catch
             {

@@ -23,7 +23,7 @@ namespace SomerenUI {
         public void refreshTeachers() {
             Teacher_Services teacherServices = new Teacher_Services();
 
-            List<Teacher> teachers = teacherServices.GetTeachers();
+            List<Teacher> teachers = teacherServices.getTeachers();
 
             teachersComboBox.Items.Clear();
 

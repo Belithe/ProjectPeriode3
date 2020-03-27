@@ -13,25 +13,25 @@ namespace SomerenDAL
 {
     public class Activity_DAO : Base
     {
-        public List<Activity> Db_Get_All_Activities()
+        public List<Activity> getAllActivities()
         {
             string query = "SELECT * FROM Activities";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Activity> Db_Get_Activity_By_Id(int id)
+        public Activity getActiviyById(int id)
         {
             string query = $"SELECT * FROM Activities WHERE ActivityId = @id";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@id", id);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
 
-        private List<Activity> ReadTables(DataTable dataTable)
+        private List<Activity> readTable(DataTable dataTable)
         {
             List<Activity> activities = new List<Activity>();
 

@@ -13,9 +13,9 @@ namespace SomerenLogic
     {
         Professors teacher_db = new Professors();
 
-        public List<Teacher> GetTeachers()
+        public List<Teacher> getTeachers()
         {
-            List<Teacher> teachers = teacher_db.Db_Get_All_Teachers();
+            List<Teacher> teachers = teacher_db.getAllTeachers();
             return teachers;
         }
 
@@ -26,7 +26,7 @@ namespace SomerenLogic
             List<Participant> participants = participant_Service.getParticipansByUser(teacher);
 
             foreach (Participant participant in participants) {
-                Activity activity = activity_Service.GetActivityById(participant.ActivityId); // a1
+                Activity activity = activity_Service.getActivityById(participant.ActivityId); // a1
 
                 if (!(endDateTime < activity.ActivityStartDate || startDateTime > activity.ActivityEndDate)) {
                     return false;

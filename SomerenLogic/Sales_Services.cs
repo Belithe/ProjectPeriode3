@@ -10,8 +10,8 @@ namespace SomerenLogic {
     public class Sales_Services {
         Sales_DAO sales_DAO = new Sales_DAO();
 
-        public List<Sale> getAll() => sales_DAO.Db_Get_All_Sales();
-        public Sale getById(int id) => sales_DAO.Db_Get_Sale_By_Id(id);
-        public List<Sale> getByDateRange(DateTime startDateTime, DateTime endDateTime) => sales_DAO.Db_Get_Sale_By_Date_Range(startDateTime, endDateTime);
+        public List<Sale> getSales() => sales_DAO.getAllSales();
+        public Sale getSaleById(int id) => sales_DAO.getSaleById(id);
+        public List<Sale> getSalesByDateRange(DateTime startDateTime, DateTime endDateTime) => sales_DAO.getSalesByDateRange(startDateTime, endDateTime);
     }
 }

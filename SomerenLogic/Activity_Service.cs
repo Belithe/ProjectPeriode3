@@ -12,11 +12,11 @@ namespace SomerenLogic
     {
         Activity_DAO activitydb = new Activity_DAO();
 
-        public List<Activity> GetActivities()
+        public List<Activity> getActivities()
         {
             try
             {
-                List<Activity> activities = activitydb.Db_Get_All_Activities();
+                List<Activity> activities = activitydb.getAllActivities();
                 return activities;
             }
             catch
@@ -32,6 +32,6 @@ namespace SomerenLogic
 
         }
 
-        public Activity GetActivityById(int id) => activitydb.Db_Get_Activity_By_Id(id)[0];
+        public Activity getActivityById(int id) => activitydb.getActiviyById(id);
     }
 }

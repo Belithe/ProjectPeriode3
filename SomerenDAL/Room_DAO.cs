@@ -10,39 +10,39 @@ using SomerenModel;
 
 namespace SomerenDAL {
     public class Room_DAO: Base {
-        public List<Room> Db_Get_All_Rooms() {
+        public List<Room> getAllRooms() {
             string query = "SELECT * FROM Rooms";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Room> Db_Get_All_Rooms_With_Users() {
+        public List<Room> getAllRoomsWithUsers() {
             string query = "SELECT * " +
                             "FROM Rooms " +
                             "JOIN Users ON Rooms.RoomNumber = Users.RoomNumber;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTablesJoined(ExecuteSelectQuery(query, sqlParameters));
+            return readTableJoined(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Room> Db_Get_Room_By_Number(int roomNumber) {
+        public Room getRoomByNumber(int roomNumber) {
             string query = $"SELECT * FROM Rooms WHERE RoomNumber = @roomNumber";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@roomNumber", roomNumber);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
-        public List<Room> Db_Get_Room_By_Type(string roomType) {
+        public List<Room> getRoomsByType(string roomType) {
             string query = $"SELECT * FROM Rooms WHERE RoomType = @roomType";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@roomType", roomType);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<Room> ReadTables(DataTable dataTable) {
+        private List<Room> readTable(DataTable dataTable) {
             List<Room> rooms = new List<Room>();
 
             foreach (DataRow dr in dataTable.Rows) {
@@ -57,7 +57,7 @@ namespace SomerenDAL {
             return rooms;
         }
 
-        private List<Room> ReadTablesJoined(DataTable dataTable) {
+        private List<Room> readTableJoined(DataTable dataTable) {
             Dictionary<int, Room> roomsMap = new Dictionary<int, Room>();
 
             foreach (DataRow dataRow in dataTable.Rows) {

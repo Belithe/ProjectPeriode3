@@ -13,7 +13,7 @@ namespace SomerenUI {
         public void refreshStudents() {
             // fill the students listview within the students panel with a list of students
             Student_Service studService = new Student_Service();
-            List<Student> studentList = studService.GetStudents();
+            List<Student> studentList = studService.getStudents();
 
             // clear the listview before filling it again
             listViewStudents.Items.Clear();

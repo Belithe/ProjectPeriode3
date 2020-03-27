@@ -12,9 +12,9 @@ namespace SomerenLogic
     {
         Drink_DAO drink_db = new Drink_DAO();
 
-        public List<Drink> GetDrinks()
+        public List<Drink> getDrinks()
         {
-            List<Drink> drinks = drink_db.Db_Get_All_Drinks();
+            List<Drink> drinks = drink_db.getAllDrinks();
             return drinks;
         }
     }

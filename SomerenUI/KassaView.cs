@@ -26,7 +26,7 @@ namespace SomerenUI
         {
             // fill the students listview within the students panel with a list of students
             Student_Service studService = new Student_Service();
-            List<Student> studentList = studService.GetStudents();
+            List<Student> studentList = studService.getStudents();
 
             // clear the listview before filling it again
             listViewStudentsKassa.Items.Clear();
@@ -44,7 +44,7 @@ namespace SomerenUI
         {
             // fill the students listview within the students panel with a list of students
             Drink_Service drinkService = new Drink_Service();
-            List<Drink> drinkList = drinkService.GetDrinks();
+            List<Drink> drinkList = drinkService.getDrinks();
 
             // clear the listview before filling it again
             listViewDrinks.Items.Clear();
