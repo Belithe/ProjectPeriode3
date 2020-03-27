@@ -54,6 +54,45 @@ namespace SomerenDAL
             return readTable(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
+        public void delActivityById(int id)
+        {
+            string query = $"DELETE FROM Activities WHERE ActivityId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+
+            sqlParameters[0] = new SqlParameter("@id", id);
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void addNewActivity(string name, DateTime start, DateTime end)
+        {
+            string query = $"INSERT INTO Activities VALUES (@name, @start, @end)";
+
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+
+            sqlParameters[0] = new SqlParameter("@name", name) ;
+            sqlParameters[1] = new SqlParameter("@start", start);
+            sqlParameters[2] = new SqlParameter("@end", end);
+
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void updateActivityById(int id, string name, DateTime start, DateTime end)
+        {
+
+            string query = $"UPDATE Activities SET ActivityName = @name, StartDateTime = @start, EndDateTime = @end WHERE ActivityId = @id";
+
+            SqlParameter[] sqlParameters = new SqlParameter[4];
+            
+            sqlParameters[0] = new SqlParameter("@name", name);
+            sqlParameters[1] = new SqlParameter("@start", start);
+            sqlParameters[2] = new SqlParameter("@end", end);
+            sqlParameters[3] = new SqlParameter("@id", id);
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
 
         private List<Activity> readTable(DataTable dataTable)
         {

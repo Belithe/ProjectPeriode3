@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActivityView.Designer.cs">
+      <DependentUpon>ActivityView.cs</DependentUpon>
+    </Compile>
     <Compile Include="BTWView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="WeekRoosterView.Designer.cs">
       <DependentUpon>WeekRoosterView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ActivityView.resx">
+      <DependentUpon>ActivityView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BTWView.resx">
       <DependentUpon>BTWView.cs</DependentUpon>
     </EmbeddedResource>

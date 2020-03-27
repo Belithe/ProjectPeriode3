@@ -200,3 +200,4 @@ C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenUI\obj\Debug\SomerenUI.cspro
 C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
 C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenUI\obj\Debug\SomerenUI.exe
 C:\Users\matth\Source\Repos\ProjectPeriode34\SomerenUI\obj\Debug\SomerenUI.pdb
+C:\Users\matth\source\repos\ProjectPeriode34\SomerenUI\obj\Debug\SomerenUI.ActivityView.resources

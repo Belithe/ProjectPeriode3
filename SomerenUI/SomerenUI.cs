@@ -127,5 +127,10 @@ namespace SomerenUI
         private void teachersSchedulesToolStripMenuItem_Click(object sender, EventArgs e) {
             loadView(new TeachersScheduleView());
         }
+
+        private void ActivitiesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadView(new ActivityView());
+        }
     }
 }
