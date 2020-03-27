@@ -12,11 +12,11 @@ namespace SomerenLogic
     {
         Participant_DAO prt_db = new Participant_DAO();
 
-        public List<Participant> GetParticipants()
+        public List<Participant> getParticipants()
         {
             try
             {
-                List<Participant> participants = prt_db.Db_Get_All_Participants();
+                List<Participant> participants = prt_db.getAllParticipants();
                 return participants;
             }
             catch
@@ -33,7 +33,9 @@ namespace SomerenLogic
 
         }
 
-        public List<Participant> getParticipansByUser(User user) => prt_db.Db_Get_Participants_By_UserId(user.Number);
-        public void setNewUserAsParticipant(Participant participant, User user) => prt_db.Db_Set_New_User_As_Participant(participant, user);
+        public List<Participant> getParticipansByUser(User user) => prt_db.getParticipantByUserId(user.Number);
+        public List<Participant> getParticipantsWithActivity() => prt_db.getParticipantsWithActivity();
+        public List<Participant> getParticipantsWithActivityByUser(User user) => prt_db.getParticipantsWithActivityByUser(user.Number);
+        public void setNewUserAsParticipant(Participant participant, User user) => prt_db.setNewUserAsParticipant(participant, user);
     }
 }

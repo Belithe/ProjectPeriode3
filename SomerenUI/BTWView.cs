@@ -76,7 +76,7 @@ namespace SomerenUI
 
         public void CalculateBTW(DateTime startDate, DateTime endDate)
         {
-            List<SomerenModel.Sale> salesList = daoSales.Db_Get_Sale_By_Date_Range(startDate, endDate);
+            List<SomerenModel.Sale> salesList = daoSales.getSalesByDateRange(startDate, endDate);
 
             double afdracht6 = 0;
             double afdracht21 = 0;

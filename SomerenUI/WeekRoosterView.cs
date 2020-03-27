@@ -23,10 +23,10 @@ namespace SomerenUI
         public void loadDataViews()
         {
             Activity_Service actService = new Activity_Service();
-            List<Activity> activities = actService.GetActivities();
+            List<Activity> activities = actService.getActivities();
 
             Participant_Service prtService = new Participant_Service();
-            List<Participant> participants = prtService.GetParticipants();
+            List<Participant> participants = prtService.getParticipants();
 
             DataGridView gridView = new DataGridView();
 

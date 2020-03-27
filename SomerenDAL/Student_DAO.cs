@@ -12,23 +12,23 @@ namespace SomerenDAL
 {
     public class Student_DAO : Base
     {
-        public List<Student> Db_Get_All_Students()
+        public List<Student> getAllStudents()
         {
             string query = "SELECT UserId, Name FROM Users WHERE UserType = 'STU'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Student> Db_Get_Student_By_Id(int id) {
+        public Student getStudentById(int id) {
             string query = $"SELECT UserId, Name FROM Users WHERE UserType = 'STU' AND UserId = @id";
             SqlParameter[] sqlParameters = new SqlParameter[1];
 
             sqlParameters[0] = new SqlParameter("@id", id);
 
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            return readTable(ExecuteSelectQuery(query, sqlParameters))[0];
         }
 
-        private List<Student> ReadTables(DataTable dataTable)
+        private List<Student> readTable(DataTable dataTable)
         {
             List<Student> students = new List<Student>();
 

@@ -19,7 +19,7 @@ namespace SomerenUI {
 
         public void refreshRooms() {
             Room_Service roomService = new Room_Service();
-            List<Room> roomList = roomService.GetRooms();
+            List<Room> roomList = roomService.getRooms();
 
             listViewRooms.Items.Clear();
 

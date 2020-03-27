@@ -11,7 +11,7 @@ namespace SomerenLogic {
         public List<Room> getRoomsOverview() {
             Room_DAO room_DAO = new Room_DAO();
 
-            return room_DAO.Db_Get_All_Rooms_With_Users();
+            return room_DAO.getAllRoomsWithUsers();
         }
     }
 }
